@@ -9,10 +9,13 @@ p1, p2, p3 and p4). The function renter is shown as a mapping from RENTAL to PER
 which are respectively the domain and the range of renter. The expression renter(ri) = pj means
 that person p<sub>j</sub> is the renter of rental ri.
 
-<img src="images/mathfuncmapping.jpg" alt="mat func mapping" width="600"/>
+<img src="images/mathfuncmapping.jpg" alt="mathfuncmapping" width="600"/>
+
 ![Fig. B.1 Mathematical functions as mappings between sets]()
 
-![Fig. B.2 Properties as mappings between entity classes](images/propmapping.jpg)
+<img src="images/propmapping" alt="propmapping" width="500"/>
+
+![Fig. B.2 Properties as mappings between entity classes]()
 
 Fig. B.2 exhibits the more stylised way in which functional mappings are represented in
 GOSL. The roundangles9 represent entity classes, thus the extensions of entity types (cf. [1]
