@@ -1,5 +1,4 @@
-#
-The graphical formalism of GOSL
+#The graphical formalism of GOSL
 Appendix A assumes that the reader knows the graphical formalism of GOSL. This need not be
 the case for everyone. Therefore, we copy the relevant part of [1] Chap. 6 below. The textual
 formalism of GOSL is included already in Chap. 2 (The basics of DEMO-SL).
