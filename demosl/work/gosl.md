@@ -1,1 +1,34 @@
 #
+The graphical formalism of GOSL
+Appendix A assumes that the reader knows the graphical formalism of GOSL. This need not be
+the case for everyone. Therefore, we copy the relevant part of [1] Chap. 6 below. The textual
+formalism of GOSL is included already in Chap. 2 (The basics of DEMO-SL).
+The graphical formalism of GOSL is based on the Venn diagram, as illustrated by Fig. B.1. There
+are two sets: RENTAL (with example elements r1, r2 and r3) and PERSON (with example elements
+p1, p2, p3 and p4). The function renter is shown as a mapping from RENTAL to PERSON,
+which are respectively the domain and the range of renter. The expression renter(ri) = pj means
+that person pj is the renter of rental ri.
+
+![Fig. B.1 Mathematical functions as mappings between sets](images/mathfuncmapping.jpg)
+
+Fig. B.2 Properties as mappings between entity classes
+Fig. B.2 exhibits the more stylised way in which functional mappings are represented in
+GOSL. The roundangles9 represent entity classes, thus the extensions of entity types (cf. [1]
+Chap. 5). The functions are now called properties. One best considers the lines with an arrow in
+the middle as the bundles of separate mappings from elements in RENTAL to elements in PERSON
+(cf. Fig. B.1).
+RENTAL
+renter
+>
+PERSON
+>
+driver
+0..* 1..1
+0..* 1..1
+Cardinality ranges are denoted as: <min>..<max>. Examples: 0..1, 1..1,
+0..*, 1..* (“*” means undetermined). The default ranges are:
+“1..1” at the side of the range, meaning that every element in the domain
+is connected to exactly one element in the range;
+“0..*” at the side of the domain, meaning that an element in the range
+need not be connected to an element in the domain, and if it does, it may
+be connected to many elements.
