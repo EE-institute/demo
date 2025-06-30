@@ -13,7 +13,7 @@ that person p<sub>j</sub> is the renter of rental ri.
 
 ![Fig. B.1 Mathematical functions as mappings between sets]()
 
-<img src="images/propmapping" alt="propmapping" width="500"/>
+<img src="images/propmapping.jpg" alt="propmapping" width="500"/>
 
 ![Fig. B.2 Properties as mappings between entity classes]()
 
