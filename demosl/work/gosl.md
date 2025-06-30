@@ -10,11 +10,11 @@ p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub> and p<sub>4</sub>). The function ren
 which are respectively the domain and the range of renter. The expression renter(r<sub>i</sub>) = p<sub>j</sub> means
 that person p<sub>j</sub> is the renter of rental r<sub>i</sub>.
 
-<img src="images/mathfuncmapping.jpg" alt="mathfuncmapping" width="600"/>
+<a name="mathfuncmapping"><img src="images/mathfuncmapping.jpg" alt="mathfuncmapping" width="600"/>
 
 ![Fig. 1 Mathematical functions as mappings between sets]()
 
-<img src="images/propmapping.jpg" alt="propmapping" width="500"/>
+<a name="propmapping"><img src="images/propmapping.jpg" alt="propmapping" width="500"/>
 
 ![Fig. 2 Properties as mappings between entity classes]()
 
@@ -22,7 +22,7 @@ Fig. 2 exhibits the more stylised way in which functional mappings are represent
 GOSL. The roundangles9 represent entity classes, thus the extensions of entity types (cf. [1]
 Chap. 5). The functions are now called properties. One best considers the lines with an arrow in
 the middle as the bundles of separate mappings from elements in RENTAL to elements in PERSON
-([cf. Fig. 1](images/mathfuncmapping.jpg)).
+([cf. Fig. 1](#mathfuncmapping)).
 
 Cardinality ranges are denoted as: <min>..<max>. Examples: 0..1, 1..1,
 0..*, 1..* (“*” means undetermined). The default ranges are:
