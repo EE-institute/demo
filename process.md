@@ -1,3 +1,5 @@
+# DEMO-SL comittee
+
 1. indienen: indiener change-voorstel geeft aan wat veranderd is + waarom (toegevoegde waarde) + beoogd domein (b.v. inrichtingsonafhankelijk modelleren van essentie, of implementatie van organisaties modelleren of …) onderbouwt dat met minstens 1 uitgewerkt voorbeeld (oud versus nieuw); optioneel: gedocumenteerde praktijkervaring van een ander dan de indiener + aanbevelingen / wensen voor het change-proces
 2. intake: EEi checkt op ingediende change aan de formele criteria voldoet; op basis daarvan terugkoppeling aan indiener met indicatie voor tijdlijn change-afhandeling
 3. ⁠⁠expertteam samenstellen door EEi-bestuur: zeg drie- of vijf-manschap, puttend uit EEi-examencie, deep-practioners met ervaring in modelleren + vertaling naar IV-specificaties / werkende ICT + liefst onafhankelijke voorzitter (zoiets als EP?)
