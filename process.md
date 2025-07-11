@@ -5,3 +5,4 @@
 5. ⁠openbare consultatie (optioneel): alle belanghebbenden (b.v. modelleurs, architecten, tool-ontwikkelaars, repositorybeheerders, …) kunnen reageren, onder opgave van hun belang, hun standpunt en de onderbouwing daarvan
 6. ⁠terugkoppeling : EEi-examencie koppelt de resultaten van expertteam + openbare consultatie terug naar indiener als hoor- en wederhoor; dit kan leiden tot aanpassingen van het change-voorstel (en in het uiterste geval tot herhaling van enkele voorgaande stappen)
 7. ⁠slotadvies: EEi-examencie adviseert EEi-bestuur over adoptie van de standaard; EEi-bestuur beslist
+Inspiratiebron: https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden-aanmelden/toetsen/Toetsingsprocedure-en-criteria-22_0.pdf , vooral de inhoudelijke criteria.<img width="1190" height="108" alt="image" src="https://github.com/user-attachments/assets/9531efc7-d217-4dcd-972a-7f41d3da72d4" />
