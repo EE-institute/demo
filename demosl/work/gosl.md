@@ -74,3 +74,72 @@ elements of the class RENTAL. If GOSL is used to model the production world of a
 the result of a transaction. Events are thus elementary state changes (cf. [1] Chap. 9). As extensively
 discussed in [1] Chap. 8, a number of so-called dependent facts may start to exist together
 with an independent fact.
+
+Fig. B.4 The specification of reference laws
+
+Attributes are a special kind of properties. The distinction is first, that the range of an attribute
+type is a value class, whereas the range of a (normal) property type is an entity class, and second,
+that both cardinality ranges are the default ones (cf. Fig. B.2). This allows for a more compact
+notation of attribute types, as shown in Fig. B.4 (bottom). The domain of the attribute group is
+the class RENTAL and the range is the extension of the value type car group.
+
+Fig. B.5 The specification of cardinality laws
+
+Cardinality laws provide a further specification of reference laws, by stating what their cardinality
+ranges are, as shown in Fig. B.5. As said, the default values (so “0..*” on the side of the
+domain and “1..1” on the side of the range) may be omitted, and therefore usually are omitted.
+
+Fig. B.6 The specification of exclusion laws
+
+Exclusion laws serve to specify which facts cannot exist together, in addition to the restrictions
+that are already expressed in reference laws and cardinality laws. In other words, they state that
+the existence of a fact excludes the existence of one or more other facts. Fig. B.6 exhibits their
+graphical notation. We assume that the figure is self-explaining.
+Like existence laws determine the set of lawful states of a world, occurrence laws determine
+which state transitions are lawful. Two kinds of occurrence laws are distinguished: precedence
+laws and preclusion laws. They are presented in Fig. B.7, which we assume is self-explaining. A
+precedence law states that an event of some type, concerning a particular entity, must always
+precede an event of some other type, concerning the same entity. A preclusion law states that an
+event of some type, concerning a particular entity, forbids the (future) occurrence of an event of
+some other type, concerning the same entity.
+
+Existence laws that cannot or not easily be specified graphically, must be specified textually in
+GOSL. Here are some, presumably self-explaining, examples of textual specifications (words
+between the brackets “[“ and “]” denote variables):
+[membership] is started on [day] implies that [day] is the first day of some [month] and that
+[month] is equal to or greater than the Current Month;
+[membership] is started on [day] implies that the age of the member of [membership] on [day]
+is equal to or greater than the minimum age in the year of [day];
+Next to introducing concept types in a conceptual schema by declaration, as explained above,
+one can introduce types by derivation, meaning that one defines a new type on the basis of existing
+types. In Fig. B.8 and Fig. B.9, the graphical specification of three kinds of derived types are
+shown: specialisation, generalisation and aggregation, in accordance with their definitions in the
+FI theory (cf. [1] Chap. 5).
+
+Fig. B.8 The specification of derived types (1)
+
+Fig. B.8 (left side) exhibits an example of generalisation. It defines in a precise and complete
+way the derived type vehicle: a vehicle is either a car or a boat or an aircraft. As discussed in [1]
+Chap. 5, specialisation and generalisation are not each other’s inverses. They are fundamentally
+different ways of constructing a type on the basis of one or more other types. The only invertible
+relationships between types is the subtype-supertype relationship. For example, student is a subtype
+of person, and thus is person = a supertype of student (cf. Fig. B.9). Likewise, boat is a subtype
+of vehicle and thus vehicle is a supertype of boat, etc.
+On the right side of Fig. B.8, the notion of aggregation is explained. The derived concept offer
+could be useful for comparing the prices of a product (on a day) in different shops. The price
+would then be an attribute type of the entity type offer.
+The definition of the specialisation completed_rental in Fig. B.9 (right side) is comprehensive.
+The definition of the specialisation student (left side), however, needs to be complemented by a
+precise rule, e.g. that a student is a person for whom there is an admission in which this person is
+the applicant.
+
+Fig. B.9 The specification of derived types (2)
+
+Derived types which are not, or not completely, specified graphically, must be specified textually
+in GOSL. Here are some, presumably self-explaining, examples of textual specifications of
+derived types:
+the age of [person] on Day = Day minus the day of birth of [person]
+% Note that the age is expressed in Julian %
+the first fee of [membership] = (((12 minus the month of the starting day of [membership]) plus
+1) divided by 12) times the annual fee in the year of the starting day of [membership]
+
