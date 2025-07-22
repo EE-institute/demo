@@ -1,5 +1,6 @@
-The DEMO Specification Language v4.10
-Abstract. Conceptual models must be expressed in a suitable language in order to communicate them. To avoid misunderstandings, this language should allow for formulating clear,
+# The DEMO Specification Language v4.10
+Abstract. 
+Conceptual models must be expressed in a suitable language in order to communicate them. To avoid misunderstandings, this language should allow for formulating clear,
 unambiguous expressions. First order logic is a language that has all the properties one
 needs and wants, but it has the drawback that its common Peano-Russell notation puts off
 people who lack a background in logic and mathematics. The DEMO Specification Language (DEMO-SL) offers a user-friendly look, although it is firmly based on first order logic. The syntax of DEMO-SL is defined in Extended Backus-Naur Form (EBNF) or in syntax diagrams. In addition to formal textual expressions, it allows for graphical representations. Three aspect models, the Cooperation Model, the Process Model, and the Fact Model,
@@ -8,53 +9,74 @@ expressed in a diagram, must be expressed in formal text. The Action Model is ex
 formal text only. In addition to the explanation and illustration of DEMO-SL, the meta model or schema of each of the four aspect models is presented and discussed, as well as the
 schema of each of the diagrams kinds and table kinds.
 2 The DEMO Specification Language v4.10.1
-Ownership and authorship
+# Ownership and authorship
 The ownership of the DEMO Specification Language, abbreviated to DEMO-SL, lies with the
 Enterprise Engineering Institute. Ownership implies the responsibility regarding the correctness
 of the content of this document, and its availability on the website.
+
 The version of this document is 4.10.1. Major changes to the content will result into version
 4.11, 4.12, etc. Minor changes, notably error corrections, will result into version 4.10.1, 4.10.2,
 etc.
+
 The most recent version, as well as a selected number of earlier versions, can always be downloaded from www.ee-institute.org.
 The authorship of version 4.10 lies with Jan Dietz (rgg@sapio.nl)
-Differences with version 4.10.0
+# Differences with version 4.10.0
 Version 4.10.1 contains minor changes to version 4.10.0, mainly textual corrections.
-3
-1 Introduction
+
+# 1 Introduction
 In this document, the formal language is presented in which the essential models of DEMO-4
 (Design and Engineering Methodology for Organisations), as defined in [1], Chap. 12, are expressed. The language is called DEMO Specification Language, or DEMO-SL for short.
 The distinction between models on the one side and the diagrams, tables and formalised texts
-in which they are expressed on the other side, is crucial: they constitute respectively the semantics and the syntax of DEMO-SL (cf. [1] Chap. 6).
+in which they are expressed on the other side, is crucial: they constitute respectively the semantics and the syntax of DEMO-SL (cf. [1]
+Chap. 6)
+
 Expressions in DEMO-SL are basically formal textual expressions in first order logic [2].
 Many textual expressions have also a graphical or tabular equivalent, because the appreciation of
 formal text in current practice is generally low, particularly by people who lack a logical/mathematical background. Therefore, one should understand DEMO diagrams as graphical representations of logical formulas. The same holds for tabular expressions.
+
 Despite the current preference for diagrams to formal text, there are limits to the expressive
 power of diagrams: they can easily become impractical if one has to remember (too) many
 shapes, symbols and constructs. Therefore, the diagrams in DEMO-SL are kept simple; they have
 a limited set of shapes, symbols and constructs. What cannot be expressed in a diagram, must be
-expressed in a formal text. To illustrate the point: the graphical process modelling language
-BPMN 2.021 comprises over 100 symbols, and the graphical data modelling language ORM 22
+expressed in a formal text. 
+To illustrate the point: the graphical process modelling language
+BPMN 2.02[1] comprises over 100 symbols, and the graphical data modelling language ORM 2[2] 
 several dozens. This makes it hard to keep up, both in producing diagrams and in reading them.
+
 In Chap. 2, the basics of DEMO-SL are presented: the definition of terms, references, variables, assertions and assignments, the declaration and the derivation of types, and the ways in
 which time values are represented. The four aspect models in DEMO, thus the Cooperation Model (CM), the Action Model (AM), the Process Model (PM) and the Fact Model (FM) as discussed
 in [1], Chap. 12, are summarised in Sect. 2.6. Figs. 2.1 and 2.2 have (slightly) been adapted to be
-compliant with the EE Implementation Theory in [3]. In Chaps. 3 through 7, the various ways in
+compliant with the EE Implementation Theory in [3]. 
+In Chaps. 3 through 7, the various ways in
 which the aspect models can be expressed, are discussed. Appendix A contains the meta model or
 schema of the four aspect models, as well as the schema’s of the diagrams and tables in which
-they are expressed. In appendix B, the graphical formalism of GOSL (cf. [1] Chap. 6) is included, which makes it easier to read this document. In appendix C, the syntax diagram is presented. It is an alternative way to formally express the syntax of DEMO-SL. Syntax diagrams are
-applied in Chap. 5.
-4 The DEMO Specification Language v4.10.1
-2 The basics of DEMO-SL
-In this chapter, the vocabulary and the syntax of DEMO-SL are defined in the Extended BackusNaur Form (EBNF) , the international standard syntactic meta language, defined in ISO/IEC 3
-14977 . To improve readability, English words, like articles and prepositions are added, which 4
+they are expressed. In appendix B, the graphical formalism of GOSL (cf. [1] Chap. 6) is included, which makes it easier to read this document. In appendix C, the syntax diagram is presented. It is an alternative way to formally express the syntax of DEMO-SL. Syntax diagrams are applied in Chap. 5.
+4 <The DEMO Specification Language v4.10.1>
+# 2 The basics of DEMO-SL
+In this chapter, the vocabulary and the syntax of DEMO-SL are defined in the Extended BackusNaur Form (EBNF)[3] , the international standard syntactic meta language, defined in ISO/IEC 3
+14977 [4] . 
+To improve readability, English words, like articles and prepositions are added, which 4
 make the logical formulas look like structured English sentences, quite unlike the common
-Peano-Russell notation . The added words are printed in bold in order to distinguish them clearly 5
+Peano-Russell notation . 
+The added words are printed in bold in order to distinguish them clearly 5
 from the formal text. In Sect. 2.6, the four aspect models of DEMO are discussed.
-In EBNF, names are put between double quotation marks. The symbol “|” stands for “exclusive or”. The symbol “,” means “followed by”. The brackets “{“ and “}” enclose an expression
-that may be repeated a number of times (including zero); the closing bracket “}-“ means that
-there is at least one occurrence. The brackets “[“ and “]” enclose an expression that is optional.
-The end of a definition is marked by “;”. Comments are put between “%” and “%”.
-2.1 References, variables, assertions and assignments
+
+In EBNF, names are put between double quotation marks. 
+
+The symbol “|” stands for “exclusive or”. 
+
+The symbol “,” means “followed by”. 
+
+The brackets “{“ and “}” enclose an expression that may be repeated a number of times (including zero); 
+
+the closing bracket “}-“ means that there is at least one occurrence. 
+
+The brackets “[“ and “]” enclose an expression that is optional.
+
+The end of a definition is marked by “;”.
+
+Comments are put between “%” and “%”.
+# 2.1 References, variables, assertions and assignments
 reserved term = coordination act name | coordination fact name | special term;
 coordination act name = “request” | “promise” | “declare” | “accept” | “decline” | “reject” |
 “revoke” | “allow” | “refuse”;
