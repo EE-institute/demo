@@ -51,7 +51,7 @@ In Chaps. 3 through 7, the various ways in
 which the aspect models can be expressed, are discussed. Appendix A contains the meta model or
 schema of the four aspect models, as well as the schema’s of the diagrams and tables in which
 they are expressed. In appendix B, the graphical formalism of GOSL (cf. [1] Chap. 6) is included, which makes it easier to read this document. In appendix C, the syntax diagram is presented. It is an alternative way to formally express the syntax of DEMO-SL. Syntax diagrams are applied in Chap. 5.
-4 <The DEMO Specification Language v4.10.1>
+
 # 2 The basics of DEMO-SL
 In this chapter, the vocabulary and the syntax of DEMO-SL are defined in the Extended BackusNaur Form (EBNF)[3] , the international standard syntactic meta language, defined in ISO/IEC 3
 14977 [4] . 
@@ -61,118 +61,89 @@ Peano-Russell notation .
 The added words are printed in bold in order to distinguish them clearly 5
 from the formal text. In Sect. 2.6, the four aspect models of DEMO are discussed.
 
-In EBNF, names are put between double quotation marks. 
+In EBNF, names are put between double quotation marks:
 
-The symbol “|” stands for “exclusive or”. 
+The symbol “|” stands for “exclusive or”  
+The symbol “,” means “followed by”  
+The brackets “{“ and “}” enclose an expression that may be repeated a number of times (including zero) 
+the closing bracket “}-“ means that there is at least one occurrence  
+The brackets “[“ and “]” enclose an expression that is optional  
+The end of a definition is marked by “;”  
+Comments are put between “%” and “%”  
 
-The symbol “,” means “followed by”. 
-
-The brackets “{“ and “}” enclose an expression that may be repeated a number of times (including zero); 
-
-the closing bracket “}-“ means that there is at least one occurrence. 
-
-The brackets “[“ and “]” enclose an expression that is optional.
-
-The end of a definition is marked by “;”.
-
-Comments are put between “%” and “%”.
 # 2.1 References, variables, assertions and assignments
-reserved term = coordination act name | coordination fact name | special term;
+reserved term = coordination act name | coordination fact name | special term  
 coordination act name = “request” | “promise” | “declare” | “accept” | “decline” | “reject” |
-“revoke” | “allow” | “refuse”;
+“revoke” | “allow” | “refuse”  
 coordination fact name = “requested” | “promised” | “declared” | “accepted” | “declined” |
-“rejected” | “revoked” | “allowed” | “refused”;
-shorthand C-act/fact name = “rq” | “pm” | “da” | “ac” | “dc” | “rj” | “rv” | “al” | “rf”
+“rejected” | “revoked” | “allowed” | “refused”  
+shorthand C-act/fact name = “rq” | “pm” | “da” | “ac” | “dc” | “rj” | “rv” | “al” | “rf”  
 special term =
 “performer” |
-“addressee” |
-“et” % event time % |
-“ot” % operative time; it may be preceded by a coordination fact name, like “requested” % |
-“now” % at any time, the value of the variable now is the current time % |
-“is” % ‘a is b’ means that the entity referred to by a is identical to the entity referred to by b; in
-addition, “is” is used to indicate the assignment of an entity b to an entity variable a; “is” is also
-used in expressing the perfect past tense of a verb, like in ‘is completed’; % |
-“is equal to” % ‘u is equal to v’ means that the value referred to by u is equal to the value referred to by v; in mathematical terms: u = v; it is also used to indicate the assignment of the value
-v to the attribute variable u % |
-“is less than” % ‘u is less than v’ means u < v % |
-“is less than or equal to” % ‘value u is less than or equal to v’ means u ≤ v % |
-“is greater than” % ‘u is greater than v’ means u > v % |
-“is greater than or equal to” % ‘u is greater than or equal to v’ means u ≥ v % |
-“is set of” % ‘A is set of b’ defines A as a set of (individuals or sets) b % |
-“is in” % ‘a is in A’ means that the entity referred to by a is an element of the set A % |
-“is within” % ‘v is within V’ means that the value v is within the value range V % |
-“is before” % ‘s is before t’ means that the time value s is earlier than the time value t % |
-“is after” % ‘s is after t’ means that the time value s is later than the time value t % |
-“case” % ‘case value reference is equal to value name: value name’; the use of the case construct ill be explained in Sect. 2.3 %
-5
-transaction kind id = “TK”, {digit}-; Examples: TK7, TK07
-multiple transaction kind id = “MTK”, {digit}-; Examples: MTK2, MTK02
-product kind id = “PK”, {digit}-; Examples: PK3, PK03
-actor role id = “AR”, {digit}-; Examples: AR8, AR08
-transactor role id = “TAR”, {digit}-; Examples: TAR17, TAR06
-composite transactor role id = “CTAR”, {digit}-; Examples: CTAR01, CTAR1
-entity name = {letter | digit}-; Examples: John, 1089, Mary47
-value name = {letter | digit}-; Examples: sedan, 1021, 2272BP
-shorthand C-act kind id = “[“ transaction kind id, “/“, shorthand C-act/fact name, “]”;
-Examples: [TK01/rq], [TK17/da]
-shorthand C-fact kind id = “(“ transaction kind id, “/“, shorthand C-act/fact name, “)”;
-Examples: (TK01/rq), (TK17/da)
-transaction kind name = entity type name, present continuous tense of a verb
-(in lower case);
-Examples: rental completing, deposit paying
-multiple transaction kind name = noun or nominal phrase;
-Examples: persons facts, Library facts
-product kind name = “[“, entity type name, “]”, “is”, event type name (in lower case);
-Examples: [rental] is completed, [rental] is deposit paid
-actor role name = entity type name, nominal form of a verb (in lower case);
-Examples: rental completer, deposit payer
-entity type name = noun or nominal phrase (in lower case);
-Examples: rental, deposit paid rental
-entity class name = noun or nominal phrase (in upper case);
-Examples: RENTAL, DEPOSIT PAID RENTAL
-value type name = noun or nominal phrase (in lower case);
-Examples: pizza kind, car group
-value class name = noun or nominal phrase (in upper case) between “{“ and “}”;
-Examples: {PIZZA KIND}, {CAR GROUP}
-property type name = noun or nominal phrase (in lower case);
-Examples: renter, pick-up branch
-attribute type name = noun or nominal phrase (in lower case);
-Examples: age, daily rental rate
-event type name = perfect tense of a verb (in lower case);
-Examples: completed, paid
+“addressee” |  
+“et” % event time % |  
+“ot” % operative time; it may be preceded by a coordination fact name, like “requested” % |  
+“**now**” % at any time, the value of the variable **now** is the current time % |  
+“**is**” % ‘a **is** b’ means that the entity referred to by a is identical to the entity referred to by b
+in addition, “**is**” is used to indicate the assignment of an entity b to an entity variable a;    
+“**is**” is also used in expressing the perfect past tense of a verb, like in ‘**is** completed’% |  
+“**is equal to**” % ‘u **is equal** to v’ means that the value referred to by u is equal to the value referred to by v;  
+in mathematical terms: u = v; it is also used to indicate the assignment of the value v to the attribute variable u % |  
+“**is less than**” % ‘u **is less than** v’ means u < v % |  
+“**is less than or equal to**” % ‘value u **is less than or equal to** v’ means u ≤ v % |  
+“**is greater than**” % ‘u **is greater than** v’ means u > v % |  
+“**is greater than or equal to**” % ‘u **is greater than or equal to** v’ means u ≥ v % |  
+“**is set of**” % ‘A **is set of b**’ defines A as a set of (individuals or sets) b % |  
+“**is in**” % ‘a **is in** A’ means that the entity referred to by a is an element of the set A % |  
+“**is within**” % ‘v **is within** V’ means that the value v is within the value range V % |  
+“**is before**” % ‘s **is before** t’ means that the time value s is earlier than the time value t % |  
+“**is after**” % ‘s **is after** t’ means that the time value s is later than the time value t % |  
+“**case**” % ‘**case** value reference **is equal to** value name: value name’; the use of the case construct ill be explained in Sect. 2.3 %  
+transaction kind id = “TK”, {digit}-; Examples: TK7, TK07   
+multiple transaction kind id = “MTK”, {digit}-; Examples: MTK2, MTK02      
+product kind id = “PK”, {digit}-; Examples: PK3, PK03     
+actor role id = “AR”, {digit}-; Examples: AR8, AR08   
+transactor role id = “TAR”, {digit}-; Examples: TAR17, TAR06  
+composite transactor role id = “CTAR”, {digit}-; Examples: CTAR01, CTAR1  
+entity name = {letter | digit}-; Examples: John, 1089, Mary47  
+value name = {letter | digit}-; Examples: sedan, 1021, 2272BP   
+shorthand C-act kind id = “[“ transaction kind id, “/“, shorthand C-act/fact name, “]”; Examples: [TK01/rq], [TK17/da]  
+shorthand C-fact kind id = “(“ transaction kind id, “/“, shorthand C-act/fact name, “)”; Examples: (TK01/rq), (TK17/da)  
+transaction kind name = entity type name, present continuous tense of a verb(in lower case); Examples: rental completing, deposit paying  
+multiple transaction kind name = noun or nominal phrase; Examples: persons facts, Library facts  
+product kind name = “[“, entity type name, “]”, “is”, event type name (in lower case); Examples: [rental] is completed, [rental] is deposit paid  
+actor role name = entity type name, nominal form of a verb (in lower case); Examples: rental completer, deposit payer  
+entity type name = noun or nominal phrase (in lower case); Examples: rental, deposit paid rental  
+entity class name = noun or nominal phrase (in upper case); Examples: RENTAL, DEPOSIT PAID RENTAL  
+value type name = noun or nominal phrase (in lower case); Examples: pizza kind, car group  
+value class name = noun or nominal phrase (in upper case) between “{“ and “}”; Examples: {PIZZA KIND}, {CAR GROUP}  
+property type name = noun or nominal phrase (in lower case); Examples: renter, pick-up branch  
+attribute type name = noun or nominal phrase (in lower case); Examples: age, daily rental rate  
+event type name = perfect tense of a verb (in lower case); Examples: completed, paid  
+
 As discussed in the FI theory ([1] Chap. 5), the signifier of a conceptual thing can be a name, a
-noun or a sentence, depending on the kind of thing. Moreover, a name can be a proper name, like
+noun or a sentence, depending on the kind of thing.  Moreover, a name can be a proper name, like
 ‘John’ or ‘John Smith’ for a person, or an identifier like ‘TK01’ for a transaction kind, ‘2272BP’
 for a postal area, and ‘069684996’ for a Dutch Citizen (the so-called BSN, similar to the SSN in
-the USA).
+the USA).  
+
 To avoid confusion, we put signifiers between single quotation marks, as we did above
-already. For example, we write “value type ‘car group’” instead of “value type car group”, and
+already.  For example, we write “value type ‘car group’” instead of “value type car group”, and
 “car group ‘sedan’” instead of “car group sedan”.
-6 The DEMO Specification Language v4.10.1
-entity reference = definite entity reference | indefinite entity reference | indirect entity reference;
-definite entity reference = entity type name, entity name;
- Examples: rental ‘1089’, car ‘387462’, citizen ‘069684996’
-indefinite entity reference = “a” | “an”, entity type name;
- Examples: a person, an elephant
-indirect entity reference = [“the”], property type name, {“of” [“the”] entity reference }- ;
- Examples: renter of rental ‘1089’,
-the mother of the member of membership ‘387’
-entity variable = “[“, entity type name , “]”;
- Examples: [person], [car], [rental]
-value reference = definite value reference | indefinite value reference | indirect value reference;
-definite value reference = value type name, value name;
- Examples: number ‘1089’, day ‘2458270’, car group ‘sedan’, year ‘2021’,
-indefinite value reference = “a” | “an”, value type name;
- Examples: a number, a day, an article group
-indirect value reference = [“the”], attribute type name, {“of” [“the”] entity reference | value
-reference}- , [“within” [“the”], time reference];
- Examples: the weight of the car of rental ‘1089’,
-the daily rental rate of car group ‘sedan’ within the year ‘2021’
-value variable = “[“, value type name , “]”;
- Examples: [day], [car group]
-value range = “(“, value reference, “,”, value reference, “)”
-Examples: (1,10), (min amount, max amount)
-NOTE. Value ranges only apply to values of the scale sorts Ordinal, Interval, Rational and Absolute (cf. Chap. 2.4).
+
+entity reference = definite entity reference | indefinite entity reference | indirect entity reference;  
+definite entity reference = entity type name, entity name; Examples: rental ‘1089’, car ‘387462’, citizen ‘069684996’  
+indefinite entity reference = “**a**” | “**an**”, entity type name; Examples: **a** person, **an** elephant    
+indirect entity reference = [“**the**”], property type name, {“**of**” [“**the**”] entity reference }- ; Examples: renter **of** rental ‘1089’,**the** mother **of the** member **of** membership ‘387’    
+entity variable = “[“, entity type name , “]”; Examples: [person], [car], [rental]   
+value reference = definite value reference | indefinite value reference | indirect value reference;  
+definite value reference = value type name, value name; Examples: number ‘1089’, day ‘2458270’, car group ‘sedan’, year ‘2021’,  
+indefinite value reference = “**a**” | “**an**”, value type name; Examples: **a** number, **a** day, **an** article group   
+indirect value reference = [“**the**”], attribute type name, {“of” [“**the**”] entity reference | value reference}- , [“**within**” [“**the**”], time reference]; Examples: **the** weight **of the** car **of** rental ‘1089’, **the** daily rental rate **of** car group ‘sedan’ **within the** year ‘2021’  
+value variable = “[“, value type name , “]”; Examples: [day], [car group]    
+value range = “(“, value reference, “,”, value reference, “)” Examples: (1,10), (min amount, max amount)  
+**NOTE**.  
+Value ranges only apply to values of the scale sorts Ordinal, Interval, Rational and Absolute (cf. Chap. 2.4).
 Time values are a subclass of values. Because of their special role in (entity or value) references, they deserve special attention.
 time type name = noun or nominal phrase (in lower case);
 Examples: day, year
