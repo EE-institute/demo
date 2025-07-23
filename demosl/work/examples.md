@@ -98,78 +98,115 @@ in mathematical terms: u = v; it is also used to indicate the assignment of the 
 “**is within**” % ‘v **is within** V’ means that the value v is within the value range V % |  
 “**is before**” % ‘s **is before** t’ means that the time value s is earlier than the time value t % |  
 “**is after**” % ‘s **is after** t’ means that the time value s is later than the time value t % |  
-“**case**” % ‘**case** value reference **is equal to** value name: value name’; the use of the case construct ill be explained in Sect. 2.3 %  
-transaction kind id = “TK”, {digit}-; Examples: TK7, TK07   
-multiple transaction kind id = “MTK”, {digit}-; Examples: MTK2, MTK02      
-product kind id = “PK”, {digit}-; Examples: PK3, PK03     
-actor role id = “AR”, {digit}-; Examples: AR8, AR08   
-transactor role id = “TAR”, {digit}-; Examples: TAR17, TAR06  
-composite transactor role id = “CTAR”, {digit}-; Examples: CTAR01, CTAR1  
-entity name = {letter | digit}-; Examples: John, 1089, Mary47  
-value name = {letter | digit}-; Examples: sedan, 1021, 2272BP   
-shorthand C-act kind id = “[“ transaction kind id, “/“, shorthand C-act/fact name, “]”; Examples: [TK01/rq], [TK17/da] 
-shorthand C-fact kind id = “(“ transaction kind id, “/“, shorthand C-act/fact name, “)”; Examples: (TK01/rq), (TK17/da) 
-transaction kind name = entity type name, present continuous tense of a verb(in lower case); Examples: rental completing, deposit paying 
-multiple transaction kind name = noun or nominal phrase; Examples: persons facts, Library facts 
-product kind name = “[“, entity type name, “]”, “is”, event type name (in lower case); Examples: [rental] is completed, [rental] is deposit paid  
-actor role name = entity type name, nominal form of a verb (in lower case); Examples: rental completer, deposit payer  
-entity type name = noun or nominal phrase (in lower case); Examples: rental, deposit paid rental  
-entity class name = noun or nominal phrase (in upper case); Examples: RENTAL, DEPOSIT PAID RENTAL  
-value type name = noun or nominal phrase (in lower case); Examples: pizza kind, car group  
-value class name = noun or nominal phrase (in upper case) between “{“ and “}”; Examples: {PIZZA KIND}, {CAR GROUP}  
-property type name = noun or nominal phrase (in lower case); Examples: renter, pick-up branch  
-attribute type name = noun or nominal phrase (in lower case); Examples: age, daily rental rate  
-event type name = perfect tense of a verb (in lower case); Examples: completed, paid  
+“**case**” % ‘**case** value reference **is equal to** value name: value name’; the use of the case construct ill be explained in Sect. 2.3 % 
+
+*transaction kind id = “TK”, {digit}-;*  
+  Examples:
+  TK7,  TK07    
+*multiple transaction kind id = “MTK”, {digit}-;*
+  Examples: MTK2, MTK02  
+*product kind id = “PK”, {digit}-;*
+  Examples: PK3, PK03  
+*actor role id = “AR”, {digit}-;*
+  Examples: AR8, AR08  
+*transactor role id = “TAR”, {digit}-;*
+  Examples: TAR17, TAR06  
+*composite transactor role id = “CTAR”, {digit}-;*
+  Examples: CTAR01, CTAR1  
+*entity name = {letter | digit}-;*
+  Examples: John, 1089, Mary47  
+*value name = {letter | digit}-;*
+  Examples: sedan, 1021, 2272BP  
+*shorthand C-act kind id = “[“ transaction kind id, “/“, shorthand C-act/fact name, “]”;*
+  Examples: [TK01/rq], [TK17/da]     
+*shorthand C-fact kind id = “(“ transaction kind id, “/“, shorthand C-act/fact name, “)”;*
+  Examples: (TK01/rq), (TK17/da)   
+*transaction kind name = entity type name, present continuous tense of a verb
+(in lower case);*  
+  Examples: rental completing, deposit paying  
+*multiple transaction kind name = noun or nominal phrase;*
+  Examples: persons facts, Library facts
+*product kind name = “[“, entity type name, “]”, “is”, event type name (in lower case);*
+  Examples: [rental] is completed, [rental] is deposit paid
+*actor role name = entity type name, nominal form of a verb (in lower case);*
+  Examples: rental completer, deposit payer  
+*entity type name = noun or nominal phrase (in lower case);*
+  Examples: rental, deposit paid rental
+entity class name = noun or nominal phrase (in upper case);*
+  Examples: RENTAL, DEPOSIT PAID RENTAL
+*value type name = noun or nominal phrase (in lower case);*
+  Examples: pizza kind, car group
+*value class name = noun or nominal phrase (in upper case) between “{“ and “}”;*
+  Examples: {PIZZA KIND}, {CAR GROUP}
+*property type name = noun or nominal phrase (in lower case);*
+  Examples: renter, pick-up branch
+*attribute type name = noun or nominal phrase (in lower case);*
+  Examples: age, daily rental rate
+*event type name = perfect tense of a verb (in lower case);*
+  Examples: completed, paid
 
 As discussed in the FI theory ([1] Chap. 5), the signifier of a conceptual thing can be a name, a
-noun or a sentence, depending on the kind of thing.  Moreover, a name can be a proper name, like
-‘John’ or ‘John Smith’ for a person, or an identifier like ‘TK01’ for a transaction kind, ‘2272BP’
-for a postal area, and ‘069684996’ for a Dutch Citizen (the so-called BSN, similar to the SSN in
-the USA).  
+noun or a sentence, depending on the kind of thing.  
+Moreover, a name can be a proper name, like ‘John’ or ‘John Smith’ for a person, or an identifier like ‘TK01’ for a transaction kind, ‘2272BP’
+for a postal area, and ‘069684996’ for a Dutch Citizen (the so-called BSN, similar to the SSN in the USA).   
 
 To avoid confusion, we put signifiers between single quotation marks, as we did above
-already.  For example, we write “value type ‘car group’” instead of “value type car group”, and
-“car group ‘sedan’” instead of “car group sedan”.
+already.  
+For example, we write “value type ‘car group’” instead of “value type car group”, and “car group ‘sedan’” instead of “car group sedan”.  
 
-entity reference = definite entity reference | indefinite entity reference | indirect entity reference;  
-definite entity reference = entity type name, entity name; Examples: rental ‘1089’, car ‘387462’, citizen ‘069684996’  
-indefinite entity reference = “**a**” | “**an**”, entity type name; Examples: **a** person, **an** elephant    
-indirect entity reference = [“**the**”], property type name, {“**of**” [“**the**”] entity reference }- ; Examples: renter **of** rental ‘1089’,**the** mother **of the** member **of** membership ‘387’    
-entity variable = “[“, entity type name , “]”; Examples: [person], [car], [rental]   
-value reference = definite value reference | indefinite value reference | indirect value reference;  
-definite value reference = value type name, value name; Examples: number ‘1089’, day ‘2458270’, car group ‘sedan’, year ‘2021’,  
-indefinite value reference = “**a**” | “**an**”, value type name; Examples: **a** number, **a** day, **an** article group   
-indirect value reference = [“**the**”], attribute type name, {“of” [“**the**”] entity reference | value reference}- , [“**within**” [“**the**”], time reference]; Examples: **the** weight **of the** car **of** rental ‘1089’, **the** daily rental rate **of** car group ‘sedan’ **within the** year ‘2021’  
-value variable = “[“, value type name , “]”; Examples: [day], [car group]    
-value range = “(“, value reference, “,”, value reference, “)” Examples: (1,10), (min amount, max amount)  
-**NOTE**.  
-Value ranges only apply to values of the scale sorts Ordinal, Interval, Rational and Absolute (cf. Chap. 2.4).  
-Time values are a subclass of values. Because of their special role in (entity or value) references, they deserve special attention.  
-time type name = noun or nominal phrase (in lower case); Examples: day, year  
-time class name = noun or nominal phrase (in upper case) between “{“ and “}”; Examples: {DAY}, {YEAR}  
-time reference = definite time reference | indefinite time reference | indirect time reference;  
-definite time reference = time type name, time instance name; Examples: day ‘2458270’, year ‘2000’, week ’34’    
-indefinite time reference = “**a**” | “**an**”, time type name; Examples: **a** day, **a** month, **a** week  
-indirect time reference = “**the**” time type name, {“**of**” entity reference | value reference} |  
-“**each**” time type name, “**within**”, time range; Examples: **the** year **of the** starting day **of** rental ‘1089’,  
-**the** week **of the** ending day **of** rental ‘1089’, **each** day **within** (starting day **of** [rental], ending day **of** [rental])  
-time range = “(“, time reference, “,”, time reference, “)” Examples: (day ‘2458270’, day ‘2458280’), (week ’34’, week ’38’)  
-property variable = “**the**”, property type name, {“**of**”, entity reference | property reference | value reference | attribute reference }- , [“**in**” | “**on**”, time reference]; Examples: **the** renter **of** [rental], **the** father **of the** renter **of** [rental], **the** renter **of a** rental **on** day ‘2458270’, **the** month **in which the** car **of** rental ‘1089’ **is** taken,  
-property assertion = property variable, “**is**” | “**is not**”, property variable | entity reference;
- Examples: the renter of [rental] is the driver of [rental],
-the driver of [rental] is not person ‘92637’,
-the father of the driver of [rental] is not person ‘92637’
-attribute variable = “the”, attribute type name, {“of”, entity variable | property variable | value
-variable | attribute variable}- , [“in” | “on”, time reference];
-Examples: the age of [person],
- the daily rental rate of [car group] in [year]
-the deposit amount of a rental on day ‘2458270’,
-the penalty of a loan on the ending day of rental ’1089’
-attribute assertion = attribute variable, “is equal to” | “is not equal to” | “is greater than” | “is
-less than” | “is equal to or greater than” | “is equal to or less than” , attribute variable | definite
-value reference;
- Examples: the ending day of [rental] is equal to or greater than
-the starting day of [rental],
+entity reference = definite entity reference | indefinite entity reference | indirect entity reference;    
+* definite entity reference = entity type name, entity name;     
+  Examples:  
+  rental ‘1089’,  
+  car ‘387462’,    
+  citizen ‘069684996’        
+* indefinite entity reference = “**a**” | “**an**”, entity type name;   
+  Examples:  
+    **a** person,
+    **an** elephant       
+* indirect entity reference = [“**the**”], property type name, {“**of**” [“**the**”] entity reference }- ;  
+  Examples: renter **of** rental ‘1089’,**the** mother **of the** member **of** membership ‘387’        
+* entity variable = “[“, entity type name , “]”; 
+  Examples: [person], [car], [rental]         
+value reference = definite value reference | indefinite value reference | indirect value reference;      
+* definite value reference = value type name, value name;  
+  Examples: number ‘1089’, day ‘2458270’, car group ‘sedan’, year ‘2021’,    
+* indefinite value reference = “**a**” | “**an**”, value type name;   
+  Examples: **a** number, **a** day, **an** article group     
+* indirect value reference = [“**the**”], attribute type name, {“of” [“**the**”] entity reference | value reference}- , [“**within**” [“**the**”], time reference];
+  Examples: **the** weight **of the** car **of** rental ‘1089’, **the** daily rental rate **of** car group ‘sedan’ **within the** year ‘2021’  
+* value variable = “[“, value type name , “]”;   
+  Examples: [day], [car group]      
+* value range = “(“, value reference, “,”, value reference, “)”   
+  Examples: (1,10), (min amount, max amount)
+ 
+**NOTE**  
+Value ranges only apply to values of the scale sorts Ordinal, Interval, Rational and Absolute (cf. Chap. 2.4).  Time values are a subclass of values. Because of their special role in (entity or value) references, they deserve special attention.    
+
+* time type name = noun or nominal phrase (in lower case);    
+  Examples: day, year      
+* time class name = noun or nominal phrase (in upper case) between “{“ and “}”;  
+  Examples: {DAY}, {YEAR}  
+  time reference = definite time reference | indefinite time reference | indirect time reference;       
+* definite time reference = time type name, time instance name;   
+  Examples: day ‘2458270’, year ‘2000’, week ’34’      
+* indefinite time reference = “**a**” | “**an**”, time type name;   
+  Examples: **a** day, **a** month, **a** week    
+* indirect time reference = “**the**” time type name, {“**of**” entity reference | value reference} |   
+“**each**” time type name, “**within**”, time range;   
+  Examples: **the** year **of the** starting day **of** rental ‘1089’,    
+**the** week **of the** ending day **of** rental ‘1089’, **each** day **within** (starting day **of** [rental], ending day **of** [rental])    
+* time range = “(“, time reference, “,”, time reference, “)”   
+  Examples: (day ‘2458270’, day ‘2458280’), (week ’34’, week ’38’)    
+* property variable = “**the**”, property type name, {“**of**”, entity reference | property reference | value reference | attribute reference }- , [“**in**” | “**on**”, time reference];  
+  Examples: **the** renter **of** [rental], **the** father **of the** renter **of** [rental], **the** renter **of a** rental **on** day ‘2458270’, **the** month **in which the** car **of** rental ‘1089’ **is** taken,      
+* property assertion = property variable, “**is**” | “**is not**”, property variable | entity reference; 
+  Examples: the renter of [rental] is the driver of [rental], the driver of [rental] is not person ‘92637’, the father of the driver of [rental] is not person ‘92637’    
+attribute variable = “the”, attribute type name, {“of”, entity variable | property variable | value     
+* variable | attribute variable}- , [“in” | “on”, time reference];
+  Examples: the age of [person], the daily rental rate of [car group] in [year] the deposit amount of a rental on day ‘2458270’, the penalty of a loan on the ending day of rental ’1089’  
+* attribute assertion = attribute variable, “is equal to” | “is not equal to” | “is greater than” | “is less than” | “is equal to or greater than” | “is equal to or less than” , attribute variable | definite value reference;
+ Examples: the ending day of [rental] is equal to or greater than the starting day of [rental], 
 the number of free cars of the car group of [rental]
 on each day within (the starting day of [rental],
 the ending day of [rental]) is greater than the number ‘0’
