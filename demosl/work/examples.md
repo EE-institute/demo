@@ -179,44 +179,32 @@ Value ranges only apply to values of the scale sorts Ordinal, Interval, Rational
 **NOTE** By means of this expression, one checks whether the age of someone who wants to buy
 alcoholic drinks conforms to the legal minimal age.  
 The logical operators **not**, **and** and **or** have their common meanings. In order to avoid confusion about the order in which the parts of a boolean expression are evaluated, we use brackets in
-the example expression to separate the parts clearly.  
-set membership assertion = (entity reference, “is [not] in”, entity set reference) |
-(value reference, “is [not] in”, value set reference);
-entity set reference = entity reference, where the referred entity is a set of entity reference;
-value set reference = value reference, where the referred value is a set of value reference;
-Examples: person is in members
-person is not in members
-number is in even numbers
-property assignment = property variable, “is”, property variable | entity reference;
- Examples: the renter of [rental] is the driver of [rental],
- the renter of [rental] is a person,
- the renter of [rental] is person ‘92637’
-attribute assignment = attribute variable, “is equal to” attribute variable | value reference;
-Examples: the amount of [sale] is equal to the total price of [sale],
-the amount of [sale] is equal to an amount of money,
-the amount of [sale] is equal to ’24 euro’
-set members selection = “for each” entity reference | value reference “in” entity set reference |
-value set reference “:”
-Example: for each [sale item] in [sale] :
-NOTE. Assignments occur in with-clauses in the response part of an action rule (cf. Chap. 5).
-9
-2.2 Declaration of types
+the example expression to separate the parts clearly.    
+set membership assertion = (entity reference, “**is** **[not]** **in**”, entity set reference) |
+(value reference, “**is** **[not]** **in**”, value set reference);  
+entity set reference = entity reference, where the referred entity is a **set of** entity reference;
+<table border="0">
+<tr><td><i>value set reference</i> = value reference, where the referred value is a <b>set of</b> value reference;</td><td>Examples:<br>person <b>is in</b> members<br>person <b>is not in</b> members<br>number <b>is in</b> even numbers</td></tr>
+<tr><td><i>property assignment</i> = property variable, "<b>is</b>", property variable | entity reference;</td><td>Examples:<br><b>the</b> renter <b>of</b> [rental] <b>is the</b> driver <b>of</b> [rental],<br><b>the</b> renter <b>of</b> [rental] <b>is a</b> person,<br><b>the</b> renter <b>of</b> [rental] <b>is</b> person '92637'</td></tr>
+<tr><td><i>attribute assignment</i> = attribute variable, "<b>is equal to</b>" attribute variable | value reference;</td><td>Examples:<br><b>the</b> amount <b>of</b> [sale] <b>is equal to the</b> total price <b>of</b> [sale],<br><b>the</b> amount <b>of</b> [sale] <b>is equal to an</b> amount <b>of</b> money,<br><b>the</b> amount <b>of</b> [sale] <b>is equal to</b> '24 euro'</td></tr>
+<tr><td><i>set members selection</i> = "<b>for each</b>" entity reference | value reference "<b>in</b>" entity set reference | value set reference ":";</td><td>Example:<br><b>for each</b> [sale item] <b>in</b> [sale] :</td></tr>
+</table>
+
+**NOTE** Assignments occur in with-clauses in the response part of an action rule (cf. Chap. 5).
+
+## 2.2 Declaration of types
 Fact types (or types for short) can be specified graphically and textually, both on the schema level
 and on the meta schema level cf. [1] Chap. 6). The graphical specification is discussed in Chaps.
-3 thru 6. Below, the textual specification is presented.
-type declaration = entity type declaration | value type declaration | property type declaration |
-attribute type declaration | event type declaration;
-entity type declaration = “entity type”, entity type name, “exists”;
- Example: entity type ‘rental’ exists
-value type declaration = “value type”, value type name, “exists”;
- Example: value type ‘car group’ exists
-property type declaration = “property type”, property type name, “exists”;
- Example: property type ‘renter’ exists
-attribute type declaration = “attribute type”, attribute type name, “exists”;
- Example: attribute type ‘starting day’ exists
-event type declaration = “event type”, event type name, “exists”;
- Example: event type ‘completed’ exists
-2.3 Derivation of types
+3 thru 6. Below, the textual specification is presented.  
+<table border="0">
+<tr><td><i>type declaration</i> = entity type declaration | value type declaration | property type declaration | attribute type declaration | event type declaration;</td><td></td></tr>
+<tr><td><i>entity type declaration</i> = "<b>entity type</b>", entity type name, "<b>exists</b>";</td><td>Example: <b>entity type</b> 'rental' <b>exists</b></td></tr>
+<tr><td><i>value type declaration</i> = "<b>value type</b>", value type name, "<b>exists</b>";</td><td>Example: <b>value type</b> 'car group' <b>exists</b></td></tr>
+<tr><td><i>property type declaration</i> = "<b>property type</b>", property type name, "<b>exists</b>";</td><td>Example: <b>property type</b> 'renter' <b>exists</b></td></tr>
+<tr><td><i>attribute type declaration</i> = "<b>attribute type</b>", attribute type name, "<b>exists</b>";</td><td>Example: <b>attribute type</b> 'starting day' <b>exists</b></td></tr>
+<tr><td><i>event type declaration</i> = "<b>event type</b>", event type name, "<b>exists</b>";</td><td>Example: <b>event type</b> 'completed' <b>exists</b></td></tr>
+</table>  
+## 2.3 Derivation of types
 Derived types can be specified graphically or textually. Examples of graphically specified derived types are provided in Chap. 6. Examples of textually specified derived fact types are
 provided below (the symbol “≡” must be read as “is defined as”). If the value of a derived fact is
 a choice out of a number of values, dependent on the current value of some variable, the case
