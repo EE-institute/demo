@@ -1,5 +1,5 @@
 # The DEMO Specification Language v4.10
-Abstract. 
+**Abstract**
 Conceptual models must be expressed in a suitable language in order to communicate them. To avoid misunderstandings, this language should allow for formulating clear,
 unambiguous expressions. First order logic is a language that has all the properties one
 needs and wants, but it has the drawback that its common Peano-Russell notation puts off
@@ -53,8 +53,7 @@ schema of the four aspect models, as well as the schema’s of the diagrams and 
 they are expressed. In appendix B, the graphical formalism of GOSL (cf. [1] Chap. 6) is included, which makes it easier to read this document. In appendix C, the syntax diagram is presented. It is an alternative way to formally express the syntax of DEMO-SL. Syntax diagrams are applied in Chap. 5.
 
 # 2 The basics of DEMO-SL
-In this chapter, the vocabulary and the syntax of DEMO-SL are defined in the Extended BackusNaur Form (EBNF)[3] , the international standard syntactic meta language, defined in ISO/IEC 3
-14977 [4] . 
+In this chapter, the vocabulary and the syntax of DEMO-SL are defined in the Extended BackusNaur Form (EBNF)[3] , the international standard syntactic meta language, defined in ISO/IEC 14977 [4] . 
 To improve readability, English words, like articles and prepositions are added, which 4
 make the logical formulas look like structured English sentences, quite unlike the common
 Peano-Russell notation . 
@@ -100,50 +99,32 @@ in mathematical terms: u = v; it is also used to indicate the assignment of the 
 “**is after**” % ‘s **is after** t’ means that the time value s is later than the time value t % |  
 “**case**” % ‘**case** value reference **is equal to** value name: value name’; the use of the case construct ill be explained in Sect. 2.3 % 
 
-*transaction kind id = “TK”, {digit}-;*  
-  Examples:
-  TK7,  TK07    
-*multiple transaction kind id = “MTK”, {digit}-;*
-  Examples: MTK2, MTK02  
-*product kind id = “PK”, {digit}-;*
-  Examples: PK3, PK03  
-*actor role id = “AR”, {digit}-;*
-  Examples: AR8, AR08  
-*transactor role id = “TAR”, {digit}-;*
-  Examples: TAR17, TAR06  
-*composite transactor role id = “CTAR”, {digit}-;*
-  Examples: CTAR01, CTAR1  
-*entity name = {letter | digit}-;*
-  Examples: John, 1089, Mary47  
-*value name = {letter | digit}-;*
-  Examples: sedan, 1021, 2272BP  
-*shorthand C-act kind id = “[“ transaction kind id, “/“, shorthand C-act/fact name, “]”;*
-  Examples: [TK01/rq], [TK17/da]     
-*shorthand C-fact kind id = “(“ transaction kind id, “/“, shorthand C-act/fact name, “)”;*
-  Examples: (TK01/rq), (TK17/da)   
-*transaction kind name = entity type name, present continuous tense of a verb
-(in lower case);*  
-  Examples: rental completing, deposit paying  
-*multiple transaction kind name = noun or nominal phrase;*
-  Examples: persons facts, Library facts
-*product kind name = “[“, entity type name, “]”, “is”, event type name (in lower case);*
-  Examples: [rental] is completed, [rental] is deposit paid
-*actor role name = entity type name, nominal form of a verb (in lower case);*
-  Examples: rental completer, deposit payer  
-*entity type name = noun or nominal phrase (in lower case);*
-  Examples: rental, deposit paid rental
-entity class name = noun or nominal phrase (in upper case);*
-  Examples: RENTAL, DEPOSIT PAID RENTAL
-*value type name = noun or nominal phrase (in lower case);*
-  Examples: pizza kind, car group
-*value class name = noun or nominal phrase (in upper case) between “{“ and “}”;*
-  Examples: {PIZZA KIND}, {CAR GROUP}
-*property type name = noun or nominal phrase (in lower case);*
-  Examples: renter, pick-up branch
-*attribute type name = noun or nominal phrase (in lower case);*
-  Examples: age, daily rental rate
-*event type name = perfect tense of a verb (in lower case);*
-  Examples: completed, paid
+<table border="0">
+<tr><td>transaction kind id = "TK", {digit}-;</td><td>Examples: TK7, TK07</td></tr>
+<tr><td>multiple transaction kind id = "MTK", {digit}-;</td><td>Examples: MTK2, MTK02</td></tr>
+<tr><td>product kind id = "PK", {digit}-;</td><td>Examples: PK3, PK03</td></tr>
+<tr><td>actor role id = "AR", {digit}-;</td><td>Examples: AR8, AR08</td></tr>
+<tr><td>transactor role id = "TAR", {digit}-;</td><td>Examples: TAR17, TAR06</td></tr>
+<tr><td>composite transactor role id = "CTAR", {digit}-;</td><td>Examples: CTAR01, CTAR1</td></tr>
+<tr><td>entity name = {letter | digit}-;</td><td>Examples: John, 1089, Mary47</td></tr>
+<tr><td>value name = {letter | digit}-;</td><td>Examples: sedan, 1021, 2272BP</td></tr>
+</table>
+
+<table border="0">
+<tr><td><i>shorthand C-act kind id</i> = "[" transaction kind id, "/", shorthand C-act/fact name, "]";</td><td>Examples: [TK01/rq], [TK17/da]</td></tr>
+<tr><td><i>shorthand C-fact kind id</i> = "(" transaction kind id, "/", shorthand C-act/fact name, ")";</td><td>Examples: (TK01/rq), (TK17/da)</td></tr>
+<tr><td><i>transaction kind name</i> = entity type name, present continuous tense of a verb (in lower case);</td><td>Examples: rental completing, deposit paying</td></tr>
+<tr><td><i>multiple transaction kind name</i> = noun or nominal phrase;</td><td>Examples: persons facts, Library facts</td></tr>
+<tr><td><i>product kind name</i> = "[", entity type name, "]", "<b>is</b>", event type name (in lower case);</td><td>Examples: [rental] <b>is</b> completed, [rental] <b>is</b> deposit paid</td></tr>
+<tr><td><i>actor role name</i> = entity type name, nominal form of a verb (in lower case);</td><td>Examples: rental completer, deposit payer</td></tr>
+<tr><td><i>entity type name</i> = noun or nominal phrase (in lower case);</td><td>Examples: rental, deposit paid rental</td></tr>
+<tr><td><i>entity class name</i> = noun or nominal phrase (in upper case);</td><td>Examples: RENTAL, DEPOSIT PAID RENTAL</td></tr>
+<tr><td><i>value type name</i> = noun or nominal phrase (in lower case);</td><td>Examples: pizza kind, car group</td></tr>
+<tr><td><i>value class name</i> = noun or nominal phrase (in upper case) between "{" and "}";</td><td>Examples: {PIZZA KIND}, {CAR GROUP}</td></tr>
+<tr><td><i>property type name</i> = noun or nominal phrase (in lower case);</td><td>Examples: renter, pick-up branch</td></tr>
+<tr><td><i>attribute type name</i> = noun or nominal phrase (in lower case);</td><td>Examples: age, daily rental rate</td></tr>
+<tr><td><i>event type name</i> = perfect tense of a verb (in lower case);</td><td>Examples: completed, paid</td></tr>
+</table>
 
 As discussed in the FI theory ([1] Chap. 5), the signifier of a conceptual thing can be a name, a
 noun or a sentence, depending on the kind of thing.  
@@ -154,75 +135,51 @@ To avoid confusion, we put signifiers between single quotation marks, as we did 
 already.  
 For example, we write “value type ‘car group’” instead of “value type car group”, and “car group ‘sedan’” instead of “car group sedan”.  
 
-entity reference = definite entity reference | indefinite entity reference | indirect entity reference;    
-* definite entity reference = entity type name, entity name;     
-  Examples:  
-  rental ‘1089’,  
-  car ‘387462’,    
-  citizen ‘069684996’        
-* indefinite entity reference = “**a**” | “**an**”, entity type name;   
-  Examples:  
-    **a** person,
-    **an** elephant       
-* indirect entity reference = [“**the**”], property type name, {“**of**” [“**the**”] entity reference }- ;  
-  Examples: renter **of** rental ‘1089’,**the** mother **of the** member **of** membership ‘387’        
-* entity variable = “[“, entity type name , “]”; 
-  Examples: [person], [car], [rental]         
-value reference = definite value reference | indefinite value reference | indirect value reference;      
-* definite value reference = value type name, value name;  
-  Examples: number ‘1089’, day ‘2458270’, car group ‘sedan’, year ‘2021’,    
-* indefinite value reference = “**a**” | “**an**”, value type name;   
-  Examples: **a** number, **a** day, **an** article group     
-* indirect value reference = [“**the**”], attribute type name, {“of” [“**the**”] entity reference | value reference}- , [“**within**” [“**the**”], time reference];
-  Examples: **the** weight **of the** car **of** rental ‘1089’, **the** daily rental rate **of** car group ‘sedan’ **within the** year ‘2021’  
-* value variable = “[“, value type name , “]”;   
-  Examples: [day], [car group]      
-* value range = “(“, value reference, “,”, value reference, “)”   
-  Examples: (1,10), (min amount, max amount)
+entity reference = definite entity reference | indefinite entity reference | indirect entity reference; 
+<table border="0">
+<tr><td><i>definite entity reference</i> = entity type name, entity name;</td><td>Examples: rental '1089', car '387462', citizen '069684996'</td></tr>
+<tr><td><i>indefinite entity reference</i> = "<b>a</b>" | "<b>an</b>", entity type name;</td><td>Examples: <b>a</b> person, <b>an</b> elephant</td></tr>
+<tr><td><i>indirect entity reference</i> = ["<b>the</b>"], property type name, {"<b>of</b>" ["<b>the</b>"] entity reference }-;</td><td>Examples: renter <b>of</b> rental '1089', <b>the</b> mother <b>of the</b> member <b>of</b> membership '387'</td></tr>
+<tr><td><i>entity variable</i> = "[", entity type name , "]";</td><td>Examples: [person], [car], [rental]</td></tr>
+<tr><td colspan="2"><b>value reference</b> = definite value reference | indefinite value reference | indirect value reference;</td></tr>
+<tr><td><i>definite value reference</i> = value type name, value name;</td><td>Examples: number '1089', day '2458270', car group 'sedan', year '2021'</td></tr>
+<tr><td><i>indefinite value reference</i> = "<b>a</b>" | "<b>an</b>", value type name;</td><td>Examples: <b>a</b> number, <b>a</b> day, <b>an</b> article group</td></tr>
+<tr><td><i>indirect value reference</i> = ["<b>the</b>"], attribute type name, {"<b>of</b>" ["<b>the</b>"] entity reference | value reference}-, ["<b>within</b>" ["<b>the</b>"], time reference];</td><td>Examples: <b>the</b> weight <b>of the</b> car <b>of</b> rental '1089', <b>the</b> daily rental rate <b>of</b> car group 'sedan' <b>within the</b> year '2021'</td></tr>
+<tr><td><i>value variable</i> = "[", value type name , "]";</td><td>Examples: [day], [car group]</td></tr>
+<tr><td><i>value range</i> = "(", value reference, ",", value reference, ")"</td><td>Examples: (1,10), (min amount, max amount)</td></tr>
+</table>
  
 **NOTE**  
 Value ranges only apply to values of the scale sorts Ordinal, Interval, Rational and Absolute (cf. Chap. 2.4).  Time values are a subclass of values. Because of their special role in (entity or value) references, they deserve special attention.    
 
-* time type name = noun or nominal phrase (in lower case);    
-  Examples: day, year      
-* time class name = noun or nominal phrase (in upper case) between “{“ and “}”;  
-  Examples: {DAY}, {YEAR}  
-  time reference = definite time reference | indefinite time reference | indirect time reference;       
-* definite time reference = time type name, time instance name;   
-  Examples: day ‘2458270’, year ‘2000’, week ’34’      
-* indefinite time reference = “**a**” | “**an**”, time type name;   
-  Examples: **a** day, **a** month, **a** week    
-* indirect time reference = “**the**” time type name, {“**of**” entity reference | value reference} |   
-“**each**” time type name, “**within**”, time range;   
-  Examples: **the** year **of the** starting day **of** rental ‘1089’,    
-**the** week **of the** ending day **of** rental ‘1089’, **each** day **within** (starting day **of** [rental], ending day **of** [rental])    
-* time range = “(“, time reference, “,”, time reference, “)”   
-  Examples: (day ‘2458270’, day ‘2458280’), (week ’34’, week ’38’)    
-* property variable = “**the**”, property type name, {“**of**”, entity reference | property reference | value reference | attribute reference }- , [“**in**” | “**on**”, time reference];  
-  Examples: **the** renter **of** [rental], **the** father **of the** renter **of** [rental], **the** renter **of a** rental **on** day ‘2458270’, **the** month **in which the** car **of** rental ‘1089’ **is** taken,      
-* property assertion = property variable, “**is**” | “**is not**”, property variable | entity reference; 
-  Examples: the renter of [rental] is the driver of [rental], the driver of [rental] is not person ‘92637’, the father of the driver of [rental] is not person ‘92637’    
-attribute variable = “the”, attribute type name, {“of”, entity variable | property variable | value     
-* variable | attribute variable}- , [“in” | “on”, time reference];
-  Examples: the age of [person], the daily rental rate of [car group] in [year] the deposit amount of a rental on day ‘2458270’, the penalty of a loan on the ending day of rental ’1089’  
-* attribute assertion = attribute variable, “is equal to” | “is not equal to” | “is greater than” | “is less than” | “is equal to or greater than” | “is equal to or less than” , attribute variable | definite value reference;
- Examples: the ending day of [rental] is equal to or greater than the starting day of [rental], 
-the number of free cars of the car group of [rental]
-on each day within (the starting day of [rental],
-the ending day of [rental]) is greater than the number ‘0’
-8 The DEMO Specification Language v4.10.1
-NOTE. Attribute assertions can only apply to instances of value types (or scale types) of the sorts
-Ordinal, Interval, Rational and Absolute (cf. Chap. 2.4).
-boolean assertion = “(“ property assertion | attribute assertion, “)”;
-boolean expression = boolean assertion, {“and” | “or”, boolean assertion}-;
-Example:
-((the article kind of [sale] is ‘alcoholic’) and (the age of the customer of the [sale] on the day of
-[sale] is equal to or greater than the minimal age of alcoholic drinks in the year of the [sale]))
-or (the article kind of [sale] is not ‘alcoholic’)
-NOTE. By means of this expression, one checks whether the age of someone who wants to buy
-alcoholic drinks conforms to the legal minimal age.
-The logical operators not, and and or have their common meanings. In order to avoid confusion about the order in which the parts of a boolean expression are evaluated, we use brackets in
-the example expression to separate the parts clearly.
+<table border="0">
+<tr><td><i>time type name</i> = noun or nominal phrase (in lower case);</td><td>Examples: day, year</td></tr>
+<tr><td><i>time class name</i> = noun or nominal phrase (in upper case) between "{" and "}";</td><td>Examples: {DAY}, {YEAR}</td></tr>
+<tr><td colspan="2"><b>time reference</b> = definite time reference | indefinite time reference | indirect time reference;</td></tr>
+<tr><td><i>definite time reference</i> = time type name, time instance name;</td><td>Examples: day '2458270', year '2000', week '34'</td></tr>
+<tr><td><i>indefinite time reference</i> = "<b>a</b>" | "<b>an</b>", time type name;</td><td>Examples: <b>a</b> day, <b>a</b> month, <b>a</b> week</td></tr>
+<tr><td><i>indirect time reference</i> = "<b>the</b>" time type name, {"<b>of</b>" entity reference | value reference} | "<b>each</b>" time type name, "<b>within</b>", time range;</td><td>Examples: <b>the</b> year <b>of the</b> starting day <b>of</b> rental '1089', <b>the</b> week <b>of the</b> ending day <b>of</b> rental '1089', <b>each</b> day <b>within</b> (starting day of [rental], ending day of [rental])</td></tr>
+<tr><td><i>time range</i> = "(", time reference, ",", time reference, ")"</td><td>Examples: (day '2458270', day '2458280'), (week '34', week '38')</td></tr>
+<tr><td><i>property variable</i> = "<b>the</b>", property type name, {"<b>of</b>", entity reference | property reference | value reference | attribute reference }-, ["<b>in</b>" | "<b>on</b>", time reference];</td><td>Examples: <b>the</b> renter <b>of</b> [rental], <b>the</b> father <b>of the</b> renter <b>of</b> [rental], <b>the</b> renter <b>of</b> a rental <b>on</b> day '2458270', <b>the</b> month <b>in</b> which <b>the</b> car <b>of</b> rental '1089' <b>is</b> taken</td></tr>
+<tr><td><i>property assertion</i> = property variable, "<b>is</b>" | "<b>is not</b>", property variable | entity reference;</td><td>Examples: <b>the</b> renter <b>of</b> [rental] <b>is the</b> driver <b>of</b> [rental], <b>the</b> driver <b>of</b> [rental] <b>is not</b> person '92637', <b>the</b> father <b>of the</b> driver <b>of</b> [rental] <b>is not</b> person '92637'</td></tr>
+<tr><td><i>attribute variable</i> = "<b>the</b>", attribute type name, {"<b>of</b>", entity variable | property variable | value variable | attribute variable}-, ["<b>in</b>" | "<b>on</b>", time reference];</td><td>Examples: <b>the</b> age <b>of</b> [person], <b>the</b> daily rental rate <b>of</b> [car group] <b>in</b> [year] <b>the</b> deposit amount <b>of</b> a rental <b>on</b> day '2458270', <b>the</b> penalty <b>of</b> a loan <b>on the</b> ending day <b>of</b> rental '1089'</td></tr>
+<tr><td><i>attribute assertion</i> = attribute variable, "<b>is equal to</b>" | "<b>is not equal to</b>" | "<b>is greater than</b>" | "<b>is less than</b>" | "<b>is equal to or greater than</b>" | "<b>is equal to or less than</b>", attribute variable | definite value reference;</td><td>Examples: <b>the</b> ending day <b>of</b> [rental] <b>is equal to or greater than the</b> starting day <b>of</b> [rental], <b>the</b> number <b>of</b> free cars <b>of the</b> car group <b>of</b> [rental] <b>on each</b> day <b>within</b> (<b>the</b> starting day <b>of</b> [rental], <b>the</b> ending day <b>of</b> [rental]) <b>is greater than the</b> number '0'</td></tr>
+</table>  
+
+
+**NOTE**. Attribute assertions can only apply to instances of value types (or scale types) of the sorts Ordinal, Interval, Rational and Absolute (cf. Chap. 2.4).  
+
+<table border="0">
+<i>boolean assertion</i> = "(", property assertion | attribute assertion, ")";
+<table border="0">
+<tr><td><i>boolean expression</i> = boolean assertion, {"<b>and</b>" | "<b>or</b>", boolean assertion}-;</td><td>Example:<br>((<b>the</b> article kind <b>of</b> [sale] <b>is</b> 'alcoholic') <b>and</b> (<b>the</b> age <b>of the</b> customer <b>of the</b> [sale] <b>on the</b> day <b>of</b> [sale] <b>is equal to or greater than the</b> minimal age <b>of</b> alcoholic drinks <b>in the</b> year <b>of the</b> [sale])) <b>or</b> (<b>the</b> article kind <b>of</b> [sale] <b>is not</b> 'alcoholic')</td></tr>
+</table>
+
+ 
+**NOTE** By means of this expression, one checks whether the age of someone who wants to buy
+alcoholic drinks conforms to the legal minimal age.  
+The logical operators **not**, **and** and **or** have their common meanings. In order to avoid confusion about the order in which the parts of a boolean expression are evaluated, we use brackets in
+the example expression to separate the parts clearly.  
 set membership assertion = (entity reference, “is [not] in”, entity set reference) |
 (value reference, “is [not] in”, value set reference);
 entity set reference = entity reference, where the referred entity is a set of entity reference;
