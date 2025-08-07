@@ -750,3 +750,90 @@ The green coloured and bold-lined parts collectively define the AM of an SoI. Th
 
 Recall that the default cardinality range of a property type at the domain side is 0..* and at the range side 1..1. Default values are commonly not indicated in a schema.
 
+## Schema of the FM  
+![Fig. A.4 Schema of the FM]
+
+The diagram above is the expression, in GOSL, of the schema of the FM. It applies to the state  
+space of the production world of an SoI. An example of a state space schema is the one that is  
+exhibited in Fig. 6.2.  
+Note that the property types are formulated in a concise form: the references to the elements in  
+the domain and the range are omitted.  
+Recall that the default cardinality range of a property type at the domain side is 0..* and at the  
+range side 1..1. Default values are commonly not indicated in a schema.  
+![Fig. 6.2 Example of a State Space Schema]
+
+## Coordination Structure Diagram (CSD)  
+![Fig. A.5 Definition of the Coordination Structure Diagram]
+
+The blue coloured and bold-lined parts above collectively define the (semantic) contents of a  
+Coordination Structure Diagram (CSD). Thus, every CSD represents the existence, in the chosen  
+SoI, of a number of transaction kinds, actor roles (and consequently transactor roles) as well as  
+composite transactor roles and multiple transaction kinds. In addition, it represents the existence  
+of a number of executor links, initiator links, access links and wait links. Note that a transactor  
+role is the combination of a transaction kind and the actor role that has its executor role.
+
+The instances of the property type ‘is part of’ (which exist between transaction kinds and multiple  
+transaction kinds, as well as between transactor roles and composite transactor roles) may  
+be implicitly given. It is important yet to know that a multiple transaction kind is a collection of  
+transaction kinds, and that a composite transactor role is a collection of transactor roles.  
+![Fig. 3.3 Example of a CSD]
+
+---
+
+## Action Rule Specifications  
+![Fig. A.6 Place of the Action Rule Specifications]
+
+The meaning of the blue coloured and bold-lined parts above is that every action rule applies to  
+one transaction kind step kind, e.g. TK04/da in the essential model of the Rent-A-Car organisation  
+(cf. [1] Chap. 15), but there may be several action rules that apply to the same transaction  
+kind step kind (or coordination event kind). They differ however in the additional while clause.  
+There is an action rule for every combination of a coordination event kind and a wait condition.  
+Action rules are expressed in Action Rule Specifications (ARS).
+
+---
+
+## Process Structure Diagram (PSD)  
+![Fig. A.7 Definition of the Process Structure Diagram]
+
+The blue coloured and bold-lined parts above collectively define the (semantic) contents of a  
+Process Structure Diagram (PSD). Thus, every PSD represents the existence, in the chosen SoI,  
+of a number of transaction kinds and actor roles, as well as transaction kind step kinds, where  
+every transaction kind step kind (e.g. TK04/da) is defined as the aggregation of a general step  
+kind (e.g. ‘da’) and a transaction kind (e.g. TK01). In addition, it represents the existence of a  
+number of executor links and initiator links, as well as a number of wait links between transaction  
+kind step kinds.  
+![Fig. 4.4 Example of a PSD]
+
+---
+
+## Transaction Process Diagram (TPD)  
+![Fig. A.8 Definition of the Transaction Process Diagram]
+
+The blue coloured and bold-lined parts above collectively define the (semantic) contents of a  
+Transaction Process Diagram (TPD). Fig. 4.2 shows the complete transaction pattern (CTP)  
+expressed in a TPD. A typical use of this TPD is discussed in the case Fixit (cf. [1] Chap. 13).  
+Another typical use is to show precisely the interrelationships of transactions. An example of this  
+way of using the TPD is exhibited in Fig. 4.5.
+
+---
+
+## Object Fact Diagram (OFD)  
+![Fig. A.9 Definition of the Object Fact Diagram]
+
+The blue coloured and bold-lined parts above collectively define the (semantic) contents of an  
+Object Fact Diagram (OFD). As one may expect, the diagram in Fig. A.9 is identical to the diagram  
+in Fig. A.4 (Schema of the FM).
+
+---
+
+## Transactor Product Table (TPT)  
+![Fig. A.10 Definition of the Transactor Product Table]
+
+The purple coloured and bold-lined parts above collectively define the (semantic) contents of a  
+Transactor Product Table (TPT). Thus, every TPT represents the existence, in the chosen SoI, of  
+a number of transaction kinds, actor roles, and product kinds. In addition, it expresses which actor  
+role is the executor role of a transaction kind, and which product kind is associated with the  
+transaction kind.  
+![Table 7.1 Example of a TPT]
+
+---
