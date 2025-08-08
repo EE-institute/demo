@@ -836,4 +836,4 @@ role is the executor role of a transaction kind, and which product kind is assoc
 transaction kind.  
 ![Table 7.1 Example of a TPT]
 
----
+
