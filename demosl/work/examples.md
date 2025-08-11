@@ -773,11 +773,11 @@ The graphical formalism of GOSL is based on the Venn diagram, as illustrated by 
 
 ### Fig. B.1 Mathematical functions as mappings between sets
 
-![Fig. B.1 Mathematical functions as mappings between sets](mathfuncmapping.jpg)
+![Fig. B.1 Mathematical functions as mappings between sets](images/mathfuncmapping.jpg)
 
 ### Fig. B.2 Properties as mappings between entity classes
 
-![Fig. B.2 Properties as mappings between entity classes](propmapping.jpg)
+![Fig. B.2 Properties as mappings between entity classes](images/propmapping.jpg)
 
 Fig. B.2 exhibits the more stylised way in which functional mappings are represented in GOSL. The roundangles represent entity classes, thus the extensions of entity types (cf. [1] Chap. 5). The functions are now called properties. One best considers the lines with an arrow in the middle as the bundles of separate mappings from elements in RENTAL to elements in PERSON (cf. Fig. B.1).
 
@@ -795,7 +795,7 @@ The strings "0..*" and "1..1" denote the cardinality ranges that apply. The firs
 
 ### Fig. B.3 The notation and declaration of the distinct types 
 
-![Fig. B.3 The notation and declaration of the distinct types](notationdeclaration.jpg)
+![Fig. B.3 The notation and declaration of the distinct types](images/notationdeclaration.jpg)
 
 Hereafter, the remainder of the graphical formalism of GOSL is presented in a number of figures. Fig. B.3 shows the graphical notation of the distinct types (entity, event, value, property and attribute) as well as the way in which they are entered into a conceptual schema, either by declaration or by derivation.
 
@@ -807,7 +807,7 @@ Reference laws state which facts must exist together. They are shown in Fig. B.4
 
 ### Fig. B.4 The specification of reference laws 
 
-![Fig. B.4 The specification of reference laws](referencelaw.jpg)
+![Fig. B.4 The specification of reference laws](images/referencelaw.jpg)
 
 Attributes are a special kind of properties. The distinction is first, that the range of an attribute type is a value class, whereas the range of a (normal) property type is an entity class, and second, that both cardinality ranges are the default ones (cf. Fig. B.2). This allows for a more compact notation of attribute types, as shown in Fig. B.4 (bottom). The domain of the attribute group is the class RENTAL and the range is the extension of the value type car group.
 
@@ -823,7 +823,7 @@ Attributes are a special kind of properties. The distinction is first, that the 
 
 ### Fig. B.5 The specification of cardinality laws 
 
-![Fig. B.5 The specification of cardinality laws](cardinalitylaw.jpg)
+![Fig. B.5 The specification of cardinality laws](images/cardinalitylaw.jpg)
 
 Cardinality laws provide a further specification of reference laws, by stating what their cardinality ranges are, as shown in Fig. B.5. As said, the default values (so "0..*" on the side of the domain and "1..1" on the side of the range) may be omitted, and therefore usually are omitted.
 
@@ -836,7 +836,7 @@ Cardinality laws provide a further specification of reference laws, by stating w
 
 ### Fig. B.6 The specification of exclusion laws
 
-![Fig. B.6 The specification of exclusion laws](exclusionlaw.jpg)
+![Fig. B.6 The specification of exclusion laws](images/exclusionlaw.jpg)
 
 Exclusion laws serve to specify which facts cannot exist together, in addition to the restrictions that are already expressed in reference laws and cardinality laws. In other words, they state that the existence of a fact excludes the existence of one or more other facts. Fig. B.6 exhibits their graphical notation. We assume that the figure is self-explaining.
 
@@ -851,7 +851,7 @@ Like existence laws determine the set of lawful states of a world, occurrence la
 
 ### Fig. B.7 The specification of occurrence laws
 
-![Fig. B.7 The specification of occurrence laws](occurrencelaw.jpg)
+![Fig. B.7 The specification of occurrence laws](images/occurrencelaw.jpg)
 
 **GRAPHICAL SPECIFICATION of OCCURRENCE LAWS**
 
@@ -869,7 +869,7 @@ Next to introducing concept types in a conceptual schema by declaration, as expl
 
 ### Fig. B.8 The specification of derived types (1)
 
-![Fig. B.8 The specification of derived types (1)](derivedtypes.jpg)
+![Fig. B.8 The specification of derived types (1)](images/derivedtypes.jpg)
 
 Fig. B.8 (left side) exhibits an example of generalisation. It defines in a precise and complete way the derived type vehicle: a vehicle is either a car or a boat or an aircraft. As discussed in [1] Chap. 5, specialisation and generalisation are not each other's inverses. They are fundamentally different ways of constructing a type on the basis of one or more other types. The only invertible relationships between types is the subtype-supertype relationship. For example, student is a subtype of person, and thus is person = a supertype of student (cf. Fig. B.9). Likewise, boat is a subtype of vehicle and thus vehicle is a supertype of boat, etc.
 
@@ -884,7 +884,7 @@ On the right side of Fig. B.8, the notion of aggregation is explained. The deriv
 
 ### Fig. B.9 The specification of derived types (2) 
 
-![Fig. B.9 The specification of derived types (2)](derivedtypes2.jpg)
+![Fig. B.9 The specification of derived types (2)](images/derivedtypes2.jpg)
 
 The definition of the specialisation completed_rental in Fig. B.9 (right side) is comprehensive. The definition of the specialisation student (left side), however, needs to be complemented by a precise rule, e.g. that a student is a person for whom there is an admission in which this person is the applicant.
 
