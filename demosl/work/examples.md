@@ -717,11 +717,9 @@ An example of the implementation of a (ontological) coordination act kind or C-a
 < put away your smart phone >
 ```
 
-# The DEMO Specification Language v4.10.1
-
 ## Appendix A
 
-### Fig. A.11 Definition of the Bank Contents Table (BCT) - Page 42
+### Fig. A.11 Definition of the Bank Contents Table (BCT) 
 
 ![Fig. A.11 Definition of the Bank Contents Table (BCT)]
 
@@ -729,7 +727,7 @@ The purple coloured and bold-lined parts above collectively define the (semantic
 
 The instances of the property type 'is part of' (between transaction kind and multiple transaction kind) may be implicitly given. It is important yet to understand that a multiple transaction kind is a collection of transaction kinds. Table 7.2 contains an example of a BCT.
 
-### Fig. A.12 Definition of the Bank Access Table (BAT) - Page 43
+### Fig. A.12 Definition of the Bank Access Table (BAT)
 
 ![Fig. A.12 Definition of the Bank Access Table (BAT)]
 
@@ -737,13 +735,13 @@ The purple coloured and bold-lined parts above collectively define the (semantic
 
 A BAT represents the interstriction structure of an SoI, as an alternative to drawing access links in the CSD. Access links may also exist between actor roles and multiple transaction kinds, and between composite actor roles and (multiple) transaction kinds. An example of a BAT is presented in Table 3.1.
 
-### Fig. A.13 Definition of the Create Use Table (CUT) - Page 44
+### Fig. A.13 Definition of the Create Use Table (CUT)
 
 ![Fig. A.13 Definition of the Create Use Table (CUT)]
 
 The purple coloured and bold-lined parts above collectively define the (semantic) contents of a Create Use Table (CUT). Thus, every CUT represents the existence, in the chosen SoI, of a number of transaction kind step kinds and P-fact types. In addition, it expresses for every P-fact type, in which transaction kind step kind its instances are created and in which transaction kind step kind its instances are used. Table 7.3 contains an example of a CUT.
 
-### Fig. A.14 Definition of the Authorisation Delegation Table (ADT) - Page 45
+### Fig. A.14 Definition of the Authorisation Delegation Table (ADT) 
 
 ![Fig. A.14 Definition of the Authorisation Delegation Table (ADT)]
 
@@ -751,7 +749,7 @@ The dark blue coloured and bold-lined parts above collectively define the (seman
 
 The columns of an ADT represent tasks (T), where a task is to respond to the mentioned coordination event (TKSK). The rows represent the task performers (P), which are positions in the organisation. An "A" at the crossing of a column and a row indicates that somebody in the position is authorised to perform the task, a "D" that he/she has delegated authority.
 
-### Fig. A.15 Definition of the Actor role Position Table (APT) - Page 46
+### Fig. A.15 Definition of the Actor role Position Table (APT) - 
 
 ![Fig. A.15 Definition of the Actor role Position Table (APT)]
 
@@ -759,7 +757,7 @@ The dark blue coloured and bold-lined parts above collectively define the (seman
 
 The columns of an APT represent actor roles (A). The rows represent the positions in the organisation (P). An "X" at the crossing of a column and a row indicates that somebody in the position is authorised to fill the actor role. Note that there may be multiple X's, both in a row and in a column.
 
-### Fig. A.16 Definition of the Work Instruction Specifications (WIS) - Page 47
+### Fig. A.16 Definition of the Work Instruction Specifications (WIS) 
 
 ![Fig. A.16 Definition of the Work Instruction Specifications (WIS)]
 
@@ -767,7 +765,7 @@ The dark blue coloured and bold-lined parts above collectively define the (seman
 
 A WIS specifies sequences of production steps and sequences of coordination steps that must be taken in order to perform respectively the ontological production act and the ontological coordination act that is implemented by the sequence.
 
-## Appendix B - The graphical formalism of GOSL - Page 48
+## Appendix B - The graphical formalism of GOSL 
 
 Appendix A assumes that the reader knows the graphical formalism of GOSL. This need not be the case for everyone. Therefore, we copy the relevant part of [1] Chap. 6 below. The textual formalism of GOSL is included already in Chap. 2 (The basics of DEMO-SL).
 
@@ -795,7 +793,7 @@ Default cardinality ranges need not be indicated (they may be omitted).
 
 The strings "0..*" and "1..1" denote the cardinality ranges that apply. The first number is the minimum cardinality and the second one the maximum cardinality. The symbol "*" (which can only occur as the maximum cardinality) means that the number is undetermined, i.e. any number larger than or equal to the minimum cardinality is allowed. The cardinality ranges in Fig. B.2 state that every rental has exactly one person as its renter (minimum 1 and maximum 1), and that every person is the renter of an arbitrary number of rentals (minimum 0 and maximum *). The ranges shown in Fig. B.2 are the default ones. They may be omitted, as is done e.g. in Fig. B.4.
 
-### Fig. B.3 The notation and declaration of the distinct types - Page 49
+### Fig. B.3 The notation and declaration of the distinct types 
 
 ![Fig. B.3 The notation and declaration of the distinct types]
 
@@ -807,7 +805,7 @@ As mentioned in [1] Sect. 6.2.3, a conceptual schema of a world is a specificati
 
 Reference laws state which facts must exist together. They are shown in Fig. B.4. As an example, if the property type 'renter' exists, then its domain and its range must also exist. This is expressed in the figure by connecting the representation of the property renter with the representations of the classes RENTAL and PERSON. Like roundangles represent classes of entities (of a specific type), diamonds represent classes of events (of a specific type). An event is a unary predicate concerning an entity. As exemplified in Fig. B.4, the unary predicate 'concluded' holds for elements of the class RENTAL. If GOSL is used to model the production world of an organisation (cf. [1] Chap. 8), an event is the becoming existent of the independent fact of a product, as the result of a transaction. Events are thus elementary state changes (cf. [1] Chap. 9). As extensively discussed in [1] Chap. 8, a number of so-called dependent facts may start to exist together with an independent fact.
 
-### Fig. B.4 The specification of reference laws - Page 50
+### Fig. B.4 The specification of reference laws 
 
 ![Fig. B.4 The specification of reference laws]
 
@@ -823,7 +821,7 @@ Attributes are a special kind of properties. The distinction is first, that the 
 | the domain of group is rental | ∀x,y: group(x,y) ⇒ rental(x) ∧ car_group(y) |
 | the range of group is car group | |
 
-### Fig. B.5 The specification of cardinality laws - Page 51
+### Fig. B.5 The specification of cardinality laws 
 
 ![Fig. B.5 The specification of cardinality laws]
 
@@ -869,7 +867,7 @@ Existence laws that cannot or not easily be specified graphically, must be speci
 
 Next to introducing concept types in a conceptual schema by declaration, as explained above, one can introduce types by derivation, meaning that one defines a new type on the basis of existing types. In Fig. B.8 and Fig. B.9, the graphical specification of three kinds of derived types are shown: specialisation, generalisation and aggregation, in accordance with their definitions in the FI theory (cf. [1] Chap. 5).
 
-### Fig. B.8 The specification of derived types (1) - Page 52
+### Fig. B.8 The specification of derived types (1)
 
 ![Fig. B.8 The specification of derived types (1)]
 
@@ -884,7 +882,7 @@ On the right side of Fig. B.8, the notion of aggregation is explained. The deriv
 | VEHICLE (generalisation) | VEHICLE is a generalisation of CAR, BOAT and AIRCRAFT. This is indicated by the "+" sign in the triangle. | VEHICLE = CAR ∪ BOAT ∪ AIRCRAFT<br>∀x: vehicle(x) ⇒ car(x) ∨ boat(x) ∨ aircraft(x) |
 | OFFER (aggregation) | OFFER is an aggregation of PRODUCT, SHOP and DAY. This is indicated by the "*" sign in the triangle | OFFER = PRODUCT * SHOP * DAY<br>OFFER = {(x, y, z)}: product(x) ∧ shop(y) ∧ day(z) |
 
-### Fig. B.9 The specification of derived types (2) - Page 53
+### Fig. B.9 The specification of derived types (2) 
 
 ![Fig. B.9 The specification of derived types (2)]
 
@@ -903,7 +901,7 @@ Derived types which are not, or not completely, specified graphically, must be s
  - *% Note that the age is expressed in Julian %*
 - `the first fee of [membership] = (((12 minus the month of the starting day of [membership]) plus 1) divided by 12) times the annual fee in the year of the starting day of [membership]`
 
-## Appendix C - The syntax diagram - Page 54
+## Appendix C - The syntax diagram 
 
 The syntax diagram is a graphical language for defining the syntax of a language in a formal way. Syntax diagrams are, for example, used to define the syntax of Pascal and CANDE¹⁰ ¹¹. We will use syntax diagrams particularly for defining the syntax of action rule specifications. They are presented in Fig. 26.
 
@@ -920,7 +918,7 @@ According to the defined syntax, the following (not exhaustive) set of sentences
 - ROW THE BOAT GENTLY DOWN THE OLD STREAM
 - ROW THE BOAT GENTLY DOWN - STREAM
 
-## Abbreviations - Page 55
+## Abbreviations 
 
 Hereafter, the most common abbreviations of terms in Enterprise Ontology are explained, in alphabetical order.
 
@@ -945,7 +943,7 @@ Hereafter, the most common abbreviations of terms in Enterprise Ontology are exp
 | **TPT** | Transactor Product Table | cross-model representation form of the Cooperation Model and the Fact Model |
 | **WIS** | Work Instruction Specifications | implementation form of the Action Model |
 
-## References - Page 56
+## References-
 
 1. Dietz, J.L.G., Mulder, J.B.F., Enterprise Ontology - a Human-Centric Approach to Understanding the Essence of Organisation. 2 ed. Enterprise Engineering. 2024: Springer Nature.
 2. Sowa, J.F., Knowledge representation : logical, philosophical, and computational foundations. 2000, Pacific Grove: Brooks/Cole. xiv, 594 p.
