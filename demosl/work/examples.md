@@ -717,123 +717,250 @@ An example of the implementation of a (ontological) coordination act kind or C-a
 < put away your smart phone >
 ```
 
+# The DEMO Specification Language v4.10.1
+
 ## Appendix A
 
-This appendix contains the figures that could not be inserted easily in the previous chapters. The colours in the figures have a specific meaning:
+### Fig. A.11 Definition of the Bank Contents Table (BCT) - Page 42
 
-- **green** means that the indicated parts belong to a schema,
-- **blue** means that the indicated parts belong to a diagram or to an Action Rule Specification (ARS),
-- **purple** means that the indicated parts belong to a table.
-- **dark blue** means that the indicated parts are expressions of the transition from the ontological model to the implementation model of an SoI.
+![Fig. A.11 Definition of the Bank Contents Table (BCT)]
 
-![Fig. A.1 Schema of the CM]
+The purple coloured and bold-lined parts above collectively define the (semantic) contents of a Bank Contents Table (BCT). Thus, every BCT represents the existence, in the chosen SoI, of a number of transaction kinds, multiple transaction kinds, and P-fact types. In addition, it represents for every P-fact type in which transaction kind (now interpreted as a transaction bank) instances of it are contained.
 
-The diagram above is an expression in GOSL (cf. [1] Chap. 6) of the schema that specifies the state space of the 'world' that is covered by the CM, the AM and the PM of an SoI.
+The instances of the property type 'is part of' (between transaction kind and multiple transaction kind) may be implicitly given. It is important yet to understand that a multiple transaction kind is a collection of transaction kinds. Table 7.2 contains an example of a BCT.
 
-The green coloured and bold-lined parts collectively define the CM of an SoI.
+### Fig. A.12 Definition of the Bank Access Table (BAT) - Page 43
 
-Recall that the default cardinality range of a property type at the domain side is 0..* and at the range side 1..1. Default values are commonly not indicated in a schema.
+![Fig. A.12 Definition of the Bank Access Table (BAT)]
 
-![Fig. A.2 Schema of the PM]
+The purple coloured and bold-lined parts above collectively define the (semantic) contents of a Bank Access Table (BAT). Thus, a BAT represents the existence, in the chosen SoI, of transaction kinds, multiple transaction kinds, and actor roles, as well as of access links from actor roles to transaction banks, including the executor role and the initiator roles. To clarify this, the entity type 'composite actor role' is added to the schema (which can be fully deduced from the composite transactor role).
 
-The diagram above is an expression in GOSL (cf. [1] Chap. 6) of the schema that specifies the state space of the 'world' that is covered by the CM, the AM and the PM of an SoI.
+A BAT represents the interstriction structure of an SoI, as an alternative to drawing access links in the CSD. Access links may also exist between actor roles and multiple transaction kinds, and between composite actor roles and (multiple) transaction kinds. An example of a BAT is presented in Table 3.1.
 
-The green coloured and bold-lined parts collectively define the PM of an SoI.
+### Fig. A.13 Definition of the Create Use Table (CUT) - Page 44
 
-Recall that the default cardinality range of a property type at the domain side is 0..* and at the range side 1..1. Default values are commonly not indicated in a schema.
+![Fig. A.13 Definition of the Create Use Table (CUT)]
 
-![Fig. A.3 Schema of the AM]
+The purple coloured and bold-lined parts above collectively define the (semantic) contents of a Create Use Table (CUT). Thus, every CUT represents the existence, in the chosen SoI, of a number of transaction kind step kinds and P-fact types. In addition, it expresses for every P-fact type, in which transaction kind step kind its instances are created and in which transaction kind step kind its instances are used. Table 7.3 contains an example of a CUT.
 
-The diagram above is an expression in GOSL (cf. [1] Chap. 6) of the schema that specifies the state space of the 'world' that is covered by the CM, the AM and the PM of an SoI.
+### Fig. A.14 Definition of the Authorisation Delegation Table (ADT) - Page 45
 
-The green coloured and bold-lined parts collectively define the AM of an SoI. The transaction kind step kind to which an action rule applies, is the C-event reference in the when clause (cf. Fig. 5.2). For the sake of simplicity, we ignore the other parts of the schema that may also be covered by an AM.
+![Fig. A.14 Definition of the Authorisation Delegation Table (ADT)]
 
-Recall that the default cardinality range of a property type at the domain side is 0..* and at the range side 1..1. Default values are commonly not indicated in a schema.
+The dark blue coloured and bold-lined parts above collectively define the (semantic) contents of the Authorisation Delegation Table (ADT). Note that the entity class POSITION is added to the schema, to make the definition possible.
 
-## Schema of the FM  
-![Fig. A.4 Schema of the FM]
+The columns of an ADT represent tasks (T), where a task is to respond to the mentioned coordination event (TKSK). The rows represent the task performers (P), which are positions in the organisation. An "A" at the crossing of a column and a row indicates that somebody in the position is authorised to perform the task, a "D" that he/she has delegated authority.
 
-The diagram above is the expression, in GOSL, of the schema of the FM. It applies to the state  
-space of the production world of an SoI. An example of a state space schema is the one that is  
-exhibited in Fig. 6.2.  
-Note that the property types are formulated in a concise form: the references to the elements in  
-the domain and the range are omitted.  
-Recall that the default cardinality range of a property type at the domain side is 0..* and at the  
-range side 1..1. Default values are commonly not indicated in a schema.  
-![Fig. 6.2 Example of a State Space Schema]
+### Fig. A.15 Definition of the Actor role Position Table (APT) - Page 46
 
-## Coordination Structure Diagram (CSD)  
-![Fig. A.5 Definition of the Coordination Structure Diagram]
+![Fig. A.15 Definition of the Actor role Position Table (APT)]
 
-The blue coloured and bold-lined parts above collectively define the (semantic) contents of a  
-Coordination Structure Diagram (CSD). Thus, every CSD represents the existence, in the chosen  
-SoI, of a number of transaction kinds, actor roles (and consequently transactor roles) as well as  
-composite transactor roles and multiple transaction kinds. In addition, it represents the existence  
-of a number of executor links, initiator links, access links and wait links. Note that a transactor  
-role is the combination of a transaction kind and the actor role that has its executor role.
+The dark blue coloured and bold-lined parts above collectively define the (semantic) contents of the Actor role Position Table (APT). Note that the entity class POSITION is added to the schema, to make the definition possible.
 
-The instances of the property type ‘is part of’ (which exist between transaction kinds and multiple  
-transaction kinds, as well as between transactor roles and composite transactor roles) may  
-be implicitly given. It is important yet to know that a multiple transaction kind is a collection of  
-transaction kinds, and that a composite transactor role is a collection of transactor roles.  
-![Fig. 3.3 Example of a CSD]
+The columns of an APT represent actor roles (A). The rows represent the positions in the organisation (P). An "X" at the crossing of a column and a row indicates that somebody in the position is authorised to fill the actor role. Note that there may be multiple X's, both in a row and in a column.
 
----
+### Fig. A.16 Definition of the Work Instruction Specifications (WIS) - Page 47
 
-## Action Rule Specifications  
-![Fig. A.6 Place of the Action Rule Specifications]
+![Fig. A.16 Definition of the Work Instruction Specifications (WIS)]
 
-The meaning of the blue coloured and bold-lined parts above is that every action rule applies to  
-one transaction kind step kind, e.g. TK04/da in the essential model of the Rent-A-Car organisation  
-(cf. [1] Chap. 15), but there may be several action rules that apply to the same transaction  
-kind step kind (or coordination event kind). They differ however in the additional while clause.  
-There is an action rule for every combination of a coordination event kind and a wait condition.  
-Action rules are expressed in Action Rule Specifications (ARS).
+The dark blue coloured and bold-lined parts above collectively define the (semantic) contents of the Work Instruction Specifications (WIS). Note that the entity class WORK INSTRUCTION is added to the schema, to make the definition possible.
 
----
+A WIS specifies sequences of production steps and sequences of coordination steps that must be taken in order to perform respectively the ontological production act and the ontological coordination act that is implemented by the sequence.
 
-## Process Structure Diagram (PSD)  
-![Fig. A.7 Definition of the Process Structure Diagram]
+## Appendix B - The graphical formalism of GOSL - Page 48
 
-The blue coloured and bold-lined parts above collectively define the (semantic) contents of a  
-Process Structure Diagram (PSD). Thus, every PSD represents the existence, in the chosen SoI,  
-of a number of transaction kinds and actor roles, as well as transaction kind step kinds, where  
-every transaction kind step kind (e.g. TK04/da) is defined as the aggregation of a general step  
-kind (e.g. ‘da’) and a transaction kind (e.g. TK01). In addition, it represents the existence of a  
-number of executor links and initiator links, as well as a number of wait links between transaction  
-kind step kinds.  
-![Fig. 4.4 Example of a PSD]
+Appendix A assumes that the reader knows the graphical formalism of GOSL. This need not be the case for everyone. Therefore, we copy the relevant part of [1] Chap. 6 below. The textual formalism of GOSL is included already in Chap. 2 (The basics of DEMO-SL).
 
----
+The graphical formalism of GOSL is based on the Venn diagram, as illustrated by Fig. B.1. There are two sets: RENTAL (with example elements r₁, r₂ and r₃) and PERSON (with example elements p₁, p₂, p₃ and p₄). The function renter is shown as a mapping from RENTAL to PERSON, which are respectively the domain and the range of renter. The expression renter(rᵢ) = pⱼ means that person pⱼ is the renter of rental rᵢ.
 
-## Transaction Process Diagram (TPD)  
-![Fig. A.8 Definition of the Transaction Process Diagram]
+### Fig. B.1 Mathematical functions as mappings between sets
 
-The blue coloured and bold-lined parts above collectively define the (semantic) contents of a  
-Transaction Process Diagram (TPD). Fig. 4.2 shows the complete transaction pattern (CTP)  
-expressed in a TPD. A typical use of this TPD is discussed in the case Fixit (cf. [1] Chap. 13).  
-Another typical use is to show precisely the interrelationships of transactions. An example of this  
-way of using the TPD is exhibited in Fig. 4.5.
+![Fig. B.1 Mathematical functions as mappings between sets]
 
----
+### Fig. B.2 Properties as mappings between entity classes
 
-## Object Fact Diagram (OFD)  
-![Fig. A.9 Definition of the Object Fact Diagram]
+![Fig. B.2 Properties as mappings between entity classes]
 
-The blue coloured and bold-lined parts above collectively define the (semantic) contents of an  
-Object Fact Diagram (OFD). As one may expect, the diagram in Fig. A.9 is identical to the diagram  
-in Fig. A.4 (Schema of the FM).
+Fig. B.2 exhibits the more stylised way in which functional mappings are represented in GOSL. The roundangles represent entity classes, thus the extensions of entity types (cf. [1] Chap. 5). The functions are now called properties. One best considers the lines with an arrow in the middle as the bundles of separate mappings from elements in RENTAL to elements in PERSON (cf. Fig. B.1).
 
----
+**Cardinality ranges are denoted as:**
+- `<min>..<max>` 
+- Examples: `0..1`, `1..1`, `0..*`, `1..*` ("*" means undetermined)
 
-## Transactor Product Table (TPT)  
-![Fig. A.10 Definition of the Transactor Product Table]
+**The default ranges are:**
+- `1..1` at the side of the range, meaning that every element in the domain is connected to exactly one element in the range
+- `0..*` at the side of the domain, meaning that an element in the range need not be connected to an element in the domain, and if it does, it may be connected to many elements
 
-The purple coloured and bold-lined parts above collectively define the (semantic) contents of a  
-Transactor Product Table (TPT). Thus, every TPT represents the existence, in the chosen SoI, of  
-a number of transaction kinds, actor roles, and product kinds. In addition, it expresses which actor  
-role is the executor role of a transaction kind, and which product kind is associated with the  
-transaction kind.  
-![Table 7.1 Example of a TPT]
+Default cardinality ranges need not be indicated (they may be omitted).
 
+The strings "0..*" and "1..1" denote the cardinality ranges that apply. The first number is the minimum cardinality and the second one the maximum cardinality. The symbol "*" (which can only occur as the maximum cardinality) means that the number is undetermined, i.e. any number larger than or equal to the minimum cardinality is allowed. The cardinality ranges in Fig. B.2 state that every rental has exactly one person as its renter (minimum 1 and maximum 1), and that every person is the renter of an arbitrary number of rentals (minimum 0 and maximum *). The ranges shown in Fig. B.2 are the default ones. They may be omitted, as is done e.g. in Fig. B.4.
 
+### Fig. B.3 The notation and declaration of the distinct types - Page 49
+
+![Fig. B.3 The notation and declaration of the distinct types]
+
+Hereafter, the remainder of the graphical formalism of GOSL is presented in a number of figures. Fig. B.3 shows the graphical notation of the distinct types (entity, event, value, property and attribute) as well as the way in which they are entered into a conceptual schema, either by declaration or by derivation.
+
+In terms of logic, entity types and event types are unary predicates, whereas property types and attribute types are binary predicates. To emphasise that a roundangle denotes a class, the class name is written in capitals. Next to every figure, the logical formulation is shown, in the well-known Peano-Russell Notation (PRN).
+
+As mentioned in [1] Sect. 6.2.3, a conceptual schema of a world is a specification of its state space and its transition space. The state space of a world is determined first of all by the distinct sorts of facts (entities, events, properties and attributes) that may exist in a state of the world. In addition, it is determined by the applicable existence laws. Existence laws regulate the coexistence of facts. We distinguish three kinds of existence laws: reference laws, cardinality laws and exclusion laws.
+
+Reference laws state which facts must exist together. They are shown in Fig. B.4. As an example, if the property type 'renter' exists, then its domain and its range must also exist. This is expressed in the figure by connecting the representation of the property renter with the representations of the classes RENTAL and PERSON. Like roundangles represent classes of entities (of a specific type), diamonds represent classes of events (of a specific type). An event is a unary predicate concerning an entity. As exemplified in Fig. B.4, the unary predicate 'concluded' holds for elements of the class RENTAL. If GOSL is used to model the production world of an organisation (cf. [1] Chap. 8), an event is the becoming existent of the independent fact of a product, as the result of a transaction. Events are thus elementary state changes (cf. [1] Chap. 9). As extensively discussed in [1] Chap. 8, a number of so-called dependent facts may start to exist together with an independent fact.
+
+### Fig. B.4 The specification of reference laws - Page 50
+
+![Fig. B.4 The specification of reference laws]
+
+Attributes are a special kind of properties. The distinction is first, that the range of an attribute type is a value class, whereas the range of a (normal) property type is an entity class, and second, that both cardinality ranges are the default ones (cf. Fig. B.2). This allows for a more compact notation of attribute types, as shown in Fig. B.4 (bottom). The domain of the attribute group is the class RENTAL and the range is the extension of the value type car group.
+
+**GRAPHICAL SPECIFICATION of REFERENCE LAWS**
+
+| Element | PRN Notation |
+|---------|--------------|
+| concluded concerns rental | ∀x: concluded(x) ⇒ rental(x) |
+| the domain of renter is rental | ∀x,y: renter(x,y) ⇒ rental(x) ∧ person(y) |
+| the range of renter is person | |
+| the domain of group is rental | ∀x,y: group(x,y) ⇒ rental(x) ∧ car_group(y) |
+| the range of group is car group | |
+
+### Fig. B.5 The specification of cardinality laws - Page 51
+
+![Fig. B.5 The specification of cardinality laws]
+
+Cardinality laws provide a further specification of reference laws, by stating what their cardinality ranges are, as shown in Fig. B.5. As said, the default values (so "0..*" on the side of the domain and "1..1" on the side of the range) may be omitted, and therefore usually are omitted.
+
+**GRAPHICAL SPECIFICATION of CARDINALITY LAWS**
+
+| Relationship | Description | PRN Notation |
+|-------------|-------------|--------------|
+| renter (RENTAL to PERSON) | Every rental has exactly one person as its renter. Every person is renter of zero, one or more rentals. | ∀x,y: renter(x,y) ⇒ rental(x) ∧ person(y)<br>∀x,y,z: renter(x,y,) ∧ renter(x,z) ⇒ y=z<br>∀x ∈ RENTAL: ∃y ∈ PERSON: renter(x,y) |
+| holder (DRIVING LICENSE to PERSON) | Every license is the driving license of exactly one person. Every person has zero or one driving licenses | ∀x,y: holder(x,y) ⇒ driving_license(x) ∧ person(y)<br>∀x,y,z: holder(x,y) ∧ holder(x,z) ⇒ y=z<br>∀x ∈ DRIVING_LICENSE: ∃y ∈ PERSON: holder(x,y)<br>∀x,y,z: holder(x,y) ∧ holder(z,y) ⇒ x=z |
+
+### Fig. B.6 The specification of exclusion laws
+
+![Fig. B.6 The specification of exclusion laws]
+
+Exclusion laws serve to specify which facts cannot exist together, in addition to the restrictions that are already expressed in reference laws and cardinality laws. In other words, they state that the existence of a fact excludes the existence of one or more other facts. Fig. B.6 exhibits their graphical notation. We assume that the figure is self-explaining.
+
+**GRAPHICAL SPECIFICATION of EXCLUSION LAWS**
+
+| Relationship | Description | PRN Notation |
+|-------------|-------------|--------------|
+| STUDENT ⟂ EMPLOYEE | a thing cannot at the same time be a student and an employee | STUDENT ∩ EMPLOYEE = ∅ |
+| owner ⟂ renter | a person cannot at the same time be the owner of a house and the renter of the (same) house | ∀x,y: owner(x,y,) ⇒ ¬ renter(x,y)<br>∀x,y: renter(x,y,) ⇒ ¬ owner(x,y) |
+
+Like existence laws determine the set of lawful states of a world, occurrence laws determine which state transitions are lawful. Two kinds of occurrence laws are distinguished: precedence laws and preclusion laws. They are presented in Fig. B.7, which we assume is self-explaining. A precedence law states that an event of some type, concerning a particular entity, must always precede an event of some other type, concerning the same entity. A preclusion law states that an event of some type, concerning a particular entity, forbids the (future) occurrence of an event of some other type, concerning the same entity.
+
+### Fig. B.7 The specification of occurrence laws
+
+![Fig. B.7 The specification of occurrence laws]
+
+**GRAPHICAL SPECIFICATION of OCCURRENCE LAWS**
+
+| Law Type | Description |
+|----------|-------------|
+| PRECEDENCE LAW | for all memberships it holds that the occurrence of the event `<membership> is paid` precedes the occurrence of the event `<membership> is started` |
+| EXCLUSION LAW | for all application it holds that the occurrence of the event `< application> is approved` excludes the occurrence of the event `< application> is disapproved` (and vice versa) |
+
+Existence laws that cannot or not easily be specified graphically, must be specified textually in GOSL. Here are some, presumably self-explaining, examples of textual specifications (words between the brackets "[" and "]" denote variables):
+
+- `[membership] is started on [day] implies that [day] is the first day of some [month] and that [month] is equal to or greater than the Current Month;`
+- `[membership] is started on [day] implies that the age of the member of [membership] on [day] is equal to or greater than the minimum age in the year of [day];`
+
+Next to introducing concept types in a conceptual schema by declaration, as explained above, one can introduce types by derivation, meaning that one defines a new type on the basis of existing types. In Fig. B.8 and Fig. B.9, the graphical specification of three kinds of derived types are shown: specialisation, generalisation and aggregation, in accordance with their definitions in the FI theory (cf. [1] Chap. 5).
+
+### Fig. B.8 The specification of derived types (1) - Page 52
+
+![Fig. B.8 The specification of derived types (1)]
+
+Fig. B.8 (left side) exhibits an example of generalisation. It defines in a precise and complete way the derived type vehicle: a vehicle is either a car or a boat or an aircraft. As discussed in [1] Chap. 5, specialisation and generalisation are not each other's inverses. They are fundamentally different ways of constructing a type on the basis of one or more other types. The only invertible relationships between types is the subtype-supertype relationship. For example, student is a subtype of person, and thus is person = a supertype of student (cf. Fig. B.9). Likewise, boat is a subtype of vehicle and thus vehicle is a supertype of boat, etc.
+
+On the right side of Fig. B.8, the notion of aggregation is explained. The derived concept offer could be useful for comparing the prices of a product (on a day) in different shops. The price would then be an attribute type of the entity type offer.
+
+**GRAPHICAL SPECIFICATION of GENERALISATION and AGGREGATION**
+
+| Type | Description | PRN Notation |
+|------|-------------|--------------|
+| VEHICLE (generalisation) | VEHICLE is a generalisation of CAR, BOAT and AIRCRAFT. This is indicated by the "+" sign in the triangle. | VEHICLE = CAR ∪ BOAT ∪ AIRCRAFT<br>∀x: vehicle(x) ⇒ car(x) ∨ boat(x) ∨ aircraft(x) |
+| OFFER (aggregation) | OFFER is an aggregation of PRODUCT, SHOP and DAY. This is indicated by the "*" sign in the triangle | OFFER = PRODUCT * SHOP * DAY<br>OFFER = {(x, y, z)}: product(x) ∧ shop(y) ∧ day(z) |
+
+### Fig. B.9 The specification of derived types (2) - Page 53
+
+![Fig. B.9 The specification of derived types (2)]
+
+The definition of the specialisation completed_rental in Fig. B.9 (right side) is comprehensive. The definition of the specialisation student (left side), however, needs to be complemented by a precise rule, e.g. that a student is a person for whom there is an admission in which this person is the applicant.
+
+**GRAPHICAL SPECIFICATION of SPECIALISATION**
+
+| Type | Description | PRN Notation |
+|------|-------------|--------------|
+| STUDENT | the entity type named "student" is a specialisation of the entity type named "person" | STUDENT ⊆ PERSON<br>NOTE. The derivation rule that determines whether a person is (also) a student, has to be provided yet |
+| CONCLUDED RENTAL | the entity type named "concluded rental" is a specialisation of the entity type named "rental" | CONCLUDED_RENTAL ⊆ RENTAL<br>concluded_rental(x) ⇒ rental(x) ∧ concluded(x) |
+
+Derived types which are not, or not completely, specified graphically, must be specified textually in GOSL. Here are some, presumably self-explaining, examples of textual specifications of derived types:
+
+- `the age of [person] on Day = Day minus the day of birth of [person]`
+ - *% Note that the age is expressed in Julian %*
+- `the first fee of [membership] = (((12 minus the month of the starting day of [membership]) plus 1) divided by 12) times the annual fee in the year of the starting day of [membership]`
+
+## Appendix C - The syntax diagram - Page 54
+
+The syntax diagram is a graphical language for defining the syntax of a language in a formal way. Syntax diagrams are, for example, used to define the syntax of Pascal and CANDE¹⁰ ¹¹. We will use syntax diagrams particularly for defining the syntax of action rule specifications. They are presented in Fig. 26.
+
+The easiest way to introduce syntax diagrams is by means of the example below. An arrow indicates the direction of reading. The bar at the far right side indicates the end of the definition.
+
+According to the defined syntax, the following (not exhaustive) set of sentences can be produced:
+
+- ROW THE BOAT GENTLY DOWN-STREAM
+- ROW, ROW THE BOAT GENTLY DOWN-STREAM
+- ROW, ROW, ROW THE BOAT GENTLY DOWN-STREAM
+- ROW YOUR BOAT GENTLY DOWN-STREAM
+- ROW THE BOAT DOWN-STREAM
+- ROW THE BOAT GENTLY DOWN THE STREAM
+- ROW THE BOAT GENTLY DOWN THE OLD STREAM
+- ROW THE BOAT GENTLY DOWN - STREAM
+
+## Abbreviations - Page 55
+
+Hereafter, the most common abbreviations of terms in Enterprise Ontology are explained, in alphabetical order.
+
+| Abbreviation | Full Term | Description |
+|--------------|-----------|-------------|
+| **ADT** | Authorisation Delegation Table | implementation form of the Action Model |
+| **AM** | Action Model | aspect model of the ontological model of an organisational layer |
+| **APT** | Actor role Position Table | implementation form of the Cooperation Model |
+| **ARS** | Action Rule Specifications | representation form of the Action Model |
+| **BAT** | Bank Access Table | representation form of the Cooperation Model |
+| **BCT** | Bank Contents Table | cross-model representation form of the Cooperation Model and the Fact Model |
+| **CM** | Cooperation Model | aspect model of the ontological model of an organisational layer |
+| **CSD** | Coordination Structure Diagram | representation form of the Cooperation Model |
+| **CUT** | Create Use Table | cross-model representation form of the Process Model and the Fact Model |
+| **DFS** | Derived Fact Specifications | representation form of Fact Model |
+| **FM** | Fact Model | aspect model of the ontological model of an organisational layer |
+| **ICT** | Information and Communication Technology | It combines Information Technology (IT) for information processing and storage, and Communication Technology (CT) for transmitting information |
+| **OFD** | Object Fact Diagram | representation form of Fact Model |
+| **PM** | Process Model | aspect model of the ontological model of an organisational layer |
+| **PSD** | Process Structure Diagram | representation form of the Process Model |
+| **TPD** | Transaction Process Diagram | representation form of the Process Model |
+| **TPT** | Transactor Product Table | cross-model representation form of the Cooperation Model and the Fact Model |
+| **WIS** | Work Instruction Specifications | implementation form of the Action Model |
+
+## References - Page 56
+
+1. Dietz, J.L.G., Mulder, J.B.F., Enterprise Ontology - a Human-Centric Approach to Understanding the Essence of Organisation. 2 ed. Enterprise Engineering. 2024: Springer Nature.
+2. Sowa, J.F., Knowledge representation : logical, philosophical, and computational foundations. 2000, Pacific Grove: Brooks/Cole. xiv, 594 p.
+3. Dietz, J.L.G., Mulder, J.B.F., Enterprise Design Fundamentals - settling the Enterprise Business and devising the Enterprise Organisation. Enterprise Engineering. 2025: Springer Nature.
+
+## Endnotes
+
+1. https://www.omg.org/spec/BPMN/2.0.2/PDF
+2. http://www.orm.net/pdf/ORM2_TechReport1.pdf
+3. https://en.wikipedia.org/wiki/Extended_Backus–Naur_form
+4. https://www.cl.cam.ac.uk/~mgk25/iso-14977.pdf
+5. https://en.wikipedia.org/wiki/Peano–Russell_notation
+6. https://aa.usno.navy.mil/data/docs/JulianDate.php
+7. "restriction" originates from the Latin verb "stringere", meaning trimming, curtailing. The word "interstriction" expresses that actors restrict each others decision freedom or 'play area'.
+8. In [1], an OFD is included (Fig. 15.3) that differs from Fig. 6.2. It should be replaced by Fig. 6.2.
+9. A roundangle is a rectangle with rounded corners
+10. https://www.cs.rice.edu/~javaplt/311/Readings/CPSyntax.pdf
+11. http://bitsavers.org/pdf/burroughs/B6500_6700/5000318_B6700_CANDE_Oct72.pdf
