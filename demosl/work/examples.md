@@ -943,7 +943,7 @@ Hereafter, the most common abbreviations of terms in Enterprise Ontology are exp
 | **TPT** | Transactor Product Table | cross-model representation form of the Cooperation Model and the Fact Model |
 | **WIS** | Work Instruction Specifications | implementation form of the Action Model |
 
-## References-
+## References
 
 1. Dietz, J.L.G., Mulder, J.B.F., Enterprise Ontology - a Human-Centric Approach to Understanding the Essence of Organisation. 2 ed. Enterprise Engineering. 2024: Springer Nature.
 2. Sowa, J.F., Knowledge representation : logical, philosophical, and computational foundations. 2000, Pacific Grove: Brooks/Cole. xiv, 594 p.
