@@ -1,5 +1,8 @@
 # DEMO-SL change board
 
+DEMO-SL is the Specification Language for the Design and Engineering Methodology for Organizations, as described in [Enterprise Ontology
+A Human-Centric Approach to Understanding the Essence of Organisation by Jan Dietz and Hans Mulder (2024)](https://link.springer.com/book/10.1007/978-3-031-53361-7)
+
 ## Constitution
 - The DEMO-SL change board is constituted by the EEI management
 - Changes in members of the board are decided by the EEI management
@@ -28,34 +31,30 @@
   - Why the change is needed or what the added value is of the change
   - [ ] Intended domain; TODO: beoogd domein (b.v. inrichtingsonafhankelijk modelleren van essentie, of implementatie van organisaties modelleren of …) onderbouwt dat met minstens 1 uitgewerkt voorbeeld (oud versus nieuw)
   - [ ] Optional: any relevant documentation regarding practical and/or scientific validation of the change request; TODO gedocumenteerde praktijkervaring van een ander dan de indiener + aanbevelingen / wensen voor het change-proces
-3. **Intake**
-4. **Investigation**
-5. **Public consultation** (optional)
-6. **Feedback**
-7. **Decision and publication**
+2. **Intake**
+  The change board checks whether the change request complies with the formal criteria (stated above) and will communicatie an indicative timeline for processing the change request, aimed at a maximum of 8 weeks.
+3. **Investigation**
+  The change board will investigate the change request and check, a.o.,
+  - Connection with older versions
+  - Connection with other standards
+  - Impact for different users of the standard
+  The change board can also decide for a public consultation, or to opt for a partial acceptance
+4. **Public consultation** (optional)
+  Every stakeholder (DEMO modeler, architects, tool developers, etc.) can respond, stating their interest and their argumented perspective on the change request.
+  There will be at most 4 weeks to respond.
+5. **Feedback**
+  The change board will communicate the results of the investigation and possibly of the public consultation, to enable the `right of reply'. Such a 'discussion' may lead to a change in the original change request, and in extreme cases may lead to reverting the process to the investigation step (3).
+6. **Decision and publication**
+  The board finalizes the decision and publishes the decision. In case of a (partial) adoption, a new version of the standard will be published, to which stakeholders can subscribe.
 
-2. intake: change board checkt op ingediende change aan de formele criteria voldoet;
-   op basis daarvan terugkoppeling aan indiener met indicatie voor tijdlijn change-afhandeling
-   streven is 8 weken maximaal
+## Versioning
+- [ ] t.b.d.
+
+## Resten, to be removed
 3. onderzoek: ⁠uitvoering beoordeling door changeboard,
    leidend tot gezamenlijk voorstel
    - wel/niet akkoord, al dan niet met amendementen
    - resultaat is mogelijk een voorstel voor wel/niet openbare consultatie geadviseerd & waarom
    - het gezamenlijke voorstel kan overigens een meerderheids- of minderheidsstandpunt omvattten
-   overwegingscriteria o.a.:
-   - aansluiting op eerdere versies (legacy-consequenties)
-   - aansluiting op andere standaarden (o.a. past dit bij scope van het domein, of zijn daar ook al andere standaarden voor)
-   - voor- en nadelen voor diverse doelgroepen
-4. ⁠indien er sprake is van een openbare consultatie (optioneel):
-   alle belanghebbenden (b.v. modelleurs, architecten, tool-ontwikkelaars, repositorybeheerders, …) kunnen reageren,
-   onder opgave van hun belang, hun standpunt en de onderbouwing daarvan.
-   - feedback tijd is beperkt tot max 4 weken.
-5. ⁠terugkoppeling : EEi-changeboard koppelt de resultaten van expertteam + openbare consultatie terug naar indiener als hoor- en wederhoor;
-   - dit kan leiden tot aanpassingen van het change-voorstel (en in het uiterste geval tot herhaling van enkele voorgaande stappen vanaf stap 3)
-6. ⁠resultaat: EEi-changeboard beslist en voert aanpassingen door en publiceert dit op github (waarop belanghebbenden zich kunnen abonneren).
-
-Te bepalen:
-- versienummering keuze
-
 
 Inspiratiebron: https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden-aanmelden/toetsen/Toetsingsprocedure-en-criteria-22_0.pdf , vooral de inhoudelijke criteria.
