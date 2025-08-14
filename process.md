@@ -1,15 +1,22 @@
 # DEMO-SL change board
 
-Samenstelling board ⁠expertteam samenstellen en aanstellen door EEi-bestuur:
-   minimaal drie-manschap, voorkeur voor oneven, internationaal
-   deep-practioners (serieuze ervaring, 3-5 jaar practisch DEMO ervaring) met 
-   + ervaring in modelleren, metamodelleren en taalspecificaties
-   + vertaling naar IV-specificaties / werkende ICT
-   besluitvorming op meerderheid. Bij gelijke stemmen expertvraag uitzetten of bestuur laten beslissen.
-   beslissingsbevoegdheid en aanstellingsregels van het EEi-bestuur
-   voorstellen van de board members kunnen niet beoordeeld worden door dezelfde board members. Nog steeds zullen minimaal totaal 3 mensen beoordelen.
+## Constitution
+- The DEMO-SL change board is constituted by the EEI management
+- Changes in members of the board are decided by the EEI management
+- The board consists of at least three (3) members and preferably has an uneven number of members
+- The board preferably reflects a diverse (global) geographic background
+- Board members have a deep pratical experience (at least 3 years) with DEMO, and preferably have experience with
+  + enterprise modeling, meta modeling and language specification, and/or
+  + translating requirements into (IT) solutions
+ 
+## Decision making
+- Decision making is done by a simple majority vote. In case of a tie, the board can ask advice from external experts or can ask the EEI management to take a decision.
+- There should be at least three (3) votes for a decision to be valid.
+- A member has no vote in the decision about adopting a change request submitted by that board member. In case of too few votes, external experts can be temporarily added to the board. All experts should still comply to the rules as stated above.
+- [ ] TODO: beslissingsbevoegdheid en aanstellingsregels van het EEi-bestuur
+- [ ] 
+## Scope
 
-Scope:
 - Ontologische delen van DEMO die volgens een SL vastgelegd moeten worden zoals benoemd in indiencriteria
 - Standaarden: DEMO-SL, GO-SL, 
 - Onderdelen buiten de huidige scope van de DEMO-SL worden apart beoordeeld
