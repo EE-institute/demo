@@ -14,18 +14,26 @@
 - There should be at least three (3) votes for a decision to be valid.
 - A member has no vote in the decision about adopting a change request submitted by that board member. In case of too few votes, external experts can be temporarily added to the board. All experts should still comply to the rules as stated above.
 - [ ] TODO: beslissingsbevoegdheid en aanstellingsregels van het EEi-bestuur
-- [ ] 
+
 ## Scope
+- Ontological parts of DEMO that require (meta)specification
+- The scope of this board can only be changed with approval of the EEI management
+- Current standards: DEMO-SL, GO(-)SL
+- [ ] Any part outside of this scope will be processed separately - t.b.d.
 
-- Ontologische delen van DEMO die volgens een SL vastgelegd moeten worden zoals benoemd in indiencriteria
-- Standaarden: DEMO-SL, GO-SL, 
-- Onderdelen buiten de huidige scope van de DEMO-SL worden apart beoordeeld
+## Change request process
+1. **Submission**
+  The submitter defines the desired change through an issue ticket on [this Github](https://github.com/EE-institute/demo/issues), stating at least:
+  - The parts that are impacted by the change (GOSL, syntax, aspects, visuals, examples, other)
+  - Why the change is needed or what the added value is of the change
+  - [ ] Intended domain; TODO: beoogd domein (b.v. inrichtingsonafhankelijk modelleren van essentie, of implementatie van organisaties modelleren of …) onderbouwt dat met minstens 1 uitgewerkt voorbeeld (oud versus nieuw)
+  - [ ] Optional: any relevant documentation regarding practical and/or scientific validation of the change request; TODO gedocumenteerde praktijkervaring van een ander dan de indiener + aanbevelingen / wensen voor het change-proces
+3. **Intake**
+4. **Investigation**
+5. **Public consultation** (optional)
+6. **Feedback**
+7. **Decision and publication**
 
-1. indienen: indiener change-voorstel geeft aan wat veranderd is via een issue op github, met als formele onderdelen:
-   + welke onderdelen het betreft (aspects, gosl, syntax, visuals, examples, nieuw?)
-   + waarom (toegevoegde waarde)
-   + beoogd domein (b.v. inrichtingsonafhankelijk modelleren van essentie, of implementatie van organisaties modelleren of …) onderbouwt dat met minstens 1 uitgewerkt voorbeeld (oud versus nieuw);
-   + optioneel: gedocumenteerde praktijkervaring van een ander dan de indiener + aanbevelingen / wensen voor het change-proces
 2. intake: change board checkt op ingediende change aan de formele criteria voldoet;
    op basis daarvan terugkoppeling aan indiener met indicatie voor tijdlijn change-afhandeling
    streven is 8 weken maximaal
