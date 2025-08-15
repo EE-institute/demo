@@ -38,7 +38,6 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
     - Connection with older versions
     - Connection with other standards
     - Impact for different users of the standard
-
 The change board can also decide for a public consultation, or to opt for a partial acceptance
 5. **Public consultation.** (optional)
   Every stakeholder (DEMO modeler, architects, tool developers, etc.) can respond, stating their interest and their argumented perspective on the change request.
