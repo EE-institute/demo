@@ -10,7 +10,7 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
 - The board preferably reflects a diverse (global) geographic background
 - Board members have a deep practical experience (at least 3 years) with DEMO, and preferably have experience with
   + enterprise modeling, meta modeling and language specification, and/or
-  + translating requirements into (IT) solutions
+  + translating requirements into enterprise and/or IT solution(s)
  
 ## Decision making
 - Decision making is done by a simple majority vote. In case of a tie, the board can ask advice from external experts or can ask the EEI management to take a decision.
