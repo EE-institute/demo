@@ -23,6 +23,8 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
 - Current standards: DEMO-SL, GO(-)SL
 
 ## Change request process
+This process is inspired by and loosely based on (https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden-aanmelden/toetsen/Toetsingsprocedure-en-criteria-22_0.pdf)
+
 1. **Submission.**
   The submitter defines the desired change through an issue ticket on [this Github](https://github.com/EE-institute/demo/issues), stating at least:
     - The parts that are impacted by the change (GOSL, syntax, aspects, visuals, examples, other)
@@ -34,11 +36,15 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
 2. **Intake.**
   The change board checks whether the change request complies with the formal criteria (stated above) and will communicate an indicative timeline for processing the change request, aimed at a maximum of 8 weeks.
 3. **Investigation.**
-  The change board will investigate the change request and check, a.o.,
+   a. The change board will investigate the change request and check, a.o.,
     - Connection with older versions
     - Connection with other standards
     - Impact for different users of the standard
-The change board can also decide for a public consultation, or to opt for a partial acceptance
+   b. The result of the investigation is either:
+    - accept
+    - partial accept
+    - complete decline
+    - The change board can also decide for a public consultation, or to opt for a partial acceptance
 5. **Public consultation.** (optional)
   Every stakeholder (DEMO modeler, architects, tool developers, etc.) can respond, stating their interest and their argumented perspective on the change request.
   There will be at most 4 weeks to respond.
@@ -57,4 +63,3 @@ The change board can also decide for a public consultation, or to opt for a part
    - resultaat is mogelijk een voorstel voor wel/niet openbare consultatie geadviseerd & waarom
    - het gezamenlijke voorstel kan overigens een meerderheids- of minderheidsstandpunt omvattten
 
-Inspiratiebron: https://www.forumstandaardisatie.nl/sites/default/files/BFS/3-lijsten/standaarden-aanmelden/toetsen/Toetsingsprocedure-en-criteria-22_0.pdf , vooral de inhoudelijke criteria.
