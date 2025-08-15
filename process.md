@@ -8,7 +8,7 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
 - Changes in members of the board are decided by the EEI management
 - The board consists of at least three (3) members and preferably has an uneven number of members
 - The board preferably reflects a diverse (global) geographic background
-- Board members have a deep pratical experience (at least 3 years) with DEMO, and preferably have experience with
+- Board members have a deep practical experience (at least 3 years) with DEMO, and preferably have experience with
   + enterprise modeling, meta modeling and language specification, and/or
   + translating requirements into (IT) solutions
  
