@@ -32,12 +32,12 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
     - Provide at least one complete example that highlights the change
     - Optional: any relevant documentation regarding practical and/or scientific validation of the change request, preferably with written statement from others than the submitter
 2. **Intake.**
-  The change board checks whether the change request complies with the formal criteria (stated above) and will communicatie an indicative timeline for processing the change request, aimed at a maximum of 8 weeks.
+  The change board checks whether the change request complies with the formal criteria (stated above) and will communicate an indicative timeline for processing the change request, aimed at a maximum of 8 weeks.
 3. **Investigation.**
   The change board will investigate the change request and check, a.o.,
-  - Connection with older versions
-  - Connection with other standards
-  - Impact for different users of the standard
+    - Connection with older versions
+    - Connection with other standards
+    - Impact for different users of the standard
   The change board can also decide for a public consultation, or to opt for a partial acceptance
 4. **Public consultation.** (optional)
   Every stakeholder (DEMO modeler, architects, tool developers, etc.) can respond, stating their interest and their argumented perspective on the change request.
