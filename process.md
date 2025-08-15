@@ -25,12 +25,12 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
 ## Change request process
 1. **Submission.**
   The submitter defines the desired change through an issue ticket on [this Github](https://github.com/EE-institute/demo/issues), stating at least:
-  - The parts that are impacted by the change (GOSL, syntax, aspects, visuals, examples, other)
-  - Why the change is needed
-  - The added value of the change
-  - For whom (stakeholder) is the change relevant, and who does it impact?
-  - Provide at least one complete example that highlights the change
-  - Optional: any relevant documentation regarding practical and/or scientific validation of the change request, preferably with written statement from others than the submitter
+    - The parts that are impacted by the change (GOSL, syntax, aspects, visuals, examples, other)
+    - Why the change is needed
+    - The added value of the change
+    - For whom (stakeholder) is the change relevant, and who does it impact?
+    - Provide at least one complete example that highlights the change
+    - Optional: any relevant documentation regarding practical and/or scientific validation of the change request, preferably with written statement from others than the submitter
 2. **Intake.**
   The change board checks whether the change request complies with the formal criteria (stated above) and will communicatie an indicative timeline for processing the change request, aimed at a maximum of 8 weeks.
 3. **Investigation.**
