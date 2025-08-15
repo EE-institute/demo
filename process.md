@@ -4,7 +4,7 @@ DEMO-SL is the Specification Language for the Design and Engineering Methodology
 A Human-Centric Approach to Understanding the Essence of Organisation by Jan Dietz and Hans Mulder (2024)](https://link.springer.com/book/10.1007/978-3-031-53361-7)
 
 ## Constitution
-- The DEMO-SL change board is constituted by the EEI management
+- [ ] The DEMO-SL change board is constituted by the EEI management, as approved by the board on Aug-26-2025
 - Changes in members of the board are decided by the EEI management
 - The board consists of at least three (3) members and preferably has an uneven number of members
 - The board preferably reflects a diverse (global) geographic background
@@ -16,7 +16,6 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
 - Decision making is done by a simple majority vote. In case of a tie, the board can ask advice from external experts or can ask the EEI management to take a decision.
 - There should be at least three (3) votes for a decision to be valid.
 - A member has no vote in the decision about adopting a change request submitted by that board member. In case of too few votes, external experts can be temporarily added to the board. All experts should still comply to the rules as stated above.
-- [ ] TODO: beslissingsbevoegdheid en aanstellingsregels van het EEi-bestuur
 
 ## Scope
 - Ontological parts of DEMO that require (meta)specification
