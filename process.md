@@ -36,11 +36,11 @@ This process is inspired by and loosely based on (https://www.forumstandaardisat
 2. **Intake.**
   The change board checks whether the change request complies with the formal criteria (stated above) and will communicate an indicative timeline for processing the change request, aimed at a maximum of 8 weeks.
 3. **Investigation.**
-  a. The change board will investigate the change request and check, a.o.,
-    - Connection with older versions
-    - Connection with other standards
-    - Impact for different users of the standard
-  b. The result of the investigation is either:
+    a. The change board will investigate the change request and check, a.o.,
+        - Connection with older versions
+        - Connection with other standards
+        - Impact for different users of the standard
+    b. The result of the investigation is either:
     - accept
     - partial accept
     - complete decline
