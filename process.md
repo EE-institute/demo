@@ -35,16 +35,16 @@ This process is inspired by and loosely based on (https://www.forumstandaardisat
     - Optional: any relevant documentation regarding practical and/or scientific validation of the change request, preferably with written statement from others than the submitter
 2. **Intake.**
   The change board checks whether the change request complies with the formal criteria (stated above) and will communicate an indicative timeline for processing the change request, aimed at a maximum of 8 weeks.
-3. **Investigation.**
-    a. The change board will investigate the change request and check, a.o.,
-        - Connection with older versions
-        - Connection with other standards
-        - Impact for different users of the standard
-    b. The result of the investigation is either:
-    - accept
-    - partial accept
-    - complete decline
-    - The change board can also decide for a public consultation, or to opt for a partial acceptance
+3. **Investigation.**  
+ a. The change board will investigate the change request and check, a.o.,  
+   - Connection with older versions
+   - Connection with other standards
+   - Impact for different users of the standard  
+ b. The result of the investigation is either:  
+   - accept
+   - partial accept
+   - complete decline
+   - The change board can also decide for a public consultation, or to opt for a partial acceptance
 5. **Public consultation.** (optional)
   Every stakeholder (DEMO modeler, architects, tool developers, etc.) can respond, stating their interest and their argumented perspective on the change request.
   There will be at most 4 weeks to respond.
