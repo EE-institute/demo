@@ -38,13 +38,14 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
     - Connection with older versions
     - Connection with other standards
     - Impact for different users of the standard
-  The change board can also decide for a public consultation, or to opt for a partial acceptance
-4. **Public consultation.** (optional)
+
+The change board can also decide for a public consultation, or to opt for a partial acceptance
+5. **Public consultation.** (optional)
   Every stakeholder (DEMO modeler, architects, tool developers, etc.) can respond, stating their interest and their argumented perspective on the change request.
   There will be at most 4 weeks to respond.
-5. **Feedback.**
+6. **Feedback.**
   The change board will communicate the results of the investigation and possibly of the public consultation, to enable the `right of reply'. Such a 'discussion' may lead to a change in the original change request, and in extreme cases may lead to reverting the process to the investigation step (3).
-6. **Decision and publication.**
+7. **Decision and publication.**
   The board finalizes the decision and publishes the decision. In case of a (partial) adoption, a new version of the standard will be published, to which stakeholders can subscribe.
 
 ## Versioning
