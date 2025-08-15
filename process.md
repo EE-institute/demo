@@ -23,26 +23,28 @@ A Human-Centric Approach to Understanding the Essence of Organisation by Jan Die
 - Current standards: DEMO-SL, GO(-)SL
 
 ## Change request process
-1. **Submission**
+1. **Submission.**
   The submitter defines the desired change through an issue ticket on [this Github](https://github.com/EE-institute/demo/issues), stating at least:
   - The parts that are impacted by the change (GOSL, syntax, aspects, visuals, examples, other)
-  - Why the change is needed or what the added value is of the change
-  - [ ] Intended domain; TODO: beoogd domein (b.v. inrichtingsonafhankelijk modelleren van essentie, of implementatie van organisaties modelleren of …) onderbouwt dat met minstens 1 uitgewerkt voorbeeld (oud versus nieuw)
-  - [ ] Optional: any relevant documentation regarding practical and/or scientific validation of the change request; TODO gedocumenteerde praktijkervaring van een ander dan de indiener + aanbevelingen / wensen voor het change-proces
-2. **Intake**
+  - Why the change is needed
+  - The added value of the change
+  - For whom (stakeholder) is the change relevant, and who does it impact?
+  - Provide at least one complete example that highlights the change
+  - Optional: any relevant documentation regarding practical and/or scientific validation of the change request, preferably with written statement from others than the submitter
+2. **Intake.**
   The change board checks whether the change request complies with the formal criteria (stated above) and will communicatie an indicative timeline for processing the change request, aimed at a maximum of 8 weeks.
-3. **Investigation**
+3. **Investigation.**
   The change board will investigate the change request and check, a.o.,
   - Connection with older versions
   - Connection with other standards
   - Impact for different users of the standard
   The change board can also decide for a public consultation, or to opt for a partial acceptance
-4. **Public consultation** (optional)
+4. **Public consultation.** (optional)
   Every stakeholder (DEMO modeler, architects, tool developers, etc.) can respond, stating their interest and their argumented perspective on the change request.
   There will be at most 4 weeks to respond.
-5. **Feedback**
+5. **Feedback.**
   The change board will communicate the results of the investigation and possibly of the public consultation, to enable the `right of reply'. Such a 'discussion' may lead to a change in the original change request, and in extreme cases may lead to reverting the process to the investigation step (3).
-6. **Decision and publication**
+6. **Decision and publication.**
   The board finalizes the decision and publishes the decision. In case of a (partial) adoption, a new version of the standard will be published, to which stakeholders can subscribe.
 
 ## Versioning
