@@ -3,18 +3,31 @@ The General Ontology Specification Language (GOSL) is a general language, expres
 
 ## TODO
 - [ ] decide on structure and form
+- [ ] "Entity A typed concrete thing. Examples of tangible entities are roses and cars;
+examples of intangible entities are purchases and rentals" -> NO; rose and car are entity types, some specific rose or the car with license plate A-111-AA is an entity (or object)
+- [ ] "Value: A typed abstract thing. Values are commonly ordered in value scales. Examples of values are days, meters and Boolean values" NO again, examples are 1/1/2020, true, etc. These are examples of Value Types
+- [ ] is this really first order logic?
 - [ ] is GOSL for specifying state and transition space, or to specify languages to specify ...
-- [ ] textual formalism = abstract or concrete syntax?
-- [ ] should we discern abstract from concrete syntax?
-- [ ] schemas are called ontological as names and other lexical attributes are left out. GOSL meta schema does not contains names, but textual formalism of GOSL does (...)
+- [ ] textual formalism = concrete syntax?
+- [ ] should/can we discern abstract from concrete syntax?
+- [ ] "schemas are called ontological as names and other lexical attributes are left out". GOSL meta schema does not contains names, but textual formalism of GOSL does (...)
 - [ ] "Attributes are a special kind of properties. " en vervolgens, het verschil is. Dus: attribute is niet een special kind (specialization), maar iets anders (hoewel er overlap is) -> juiste terminologie bepalen!
+- [ ] difference between thing, object (core or id of a thing without its properties), and entity??? and fact
+- [ ] is de afgeronde rechthoek nu de class of het type?! it has an object class name and is the notation of an entity type (see fig 3); en waarom object class name en niet entity class name?
+- [ ] moet event type wel onderdeel zijn van GOSL? Wel relevant voor metamodel van FM, niet voor zichzelf of andere talen
 
-## Purpose of this document/language
+## Purpose and scope
 
 ## Summary of relevant theories
 
 ### FI
-- Fact, information, thing, object, type, class
+- Things, objects, entities
+- A fact becomes existent in the mind when a perceived thing conforms to some type. A fact is an instantiation of a type. In logical terms, a fact is a predication of an object, with the type as predicate.
+- Type: prescription of form to be applied to things or pairs of things. If a (pair of) thing(s) conforms to a type, the fact starts to exist that represents this conformity, e.g., 'the thing called 'Jan' is a human'. We say the fact is an instance of the type, in this case the type 'human'
+- Type and class are dyadic notions: a class is the extension of a type, and a type is the intension of a class.
+When one exists, the other exists as well.
+- We distinguish between unary facts and binary facts.
+Unary facts are predications of single objects; binary facts are predications of pairs of single objects
 - Creation of types: declaration and derivation
 
 ### MU (needed?)
@@ -27,7 +40,7 @@ The General Ontology Specification Language (GOSL) is a general language, expres
 - A meta schema is an instantiation of itself
 
 ## Core concepts
-- entity type
+- entity type: unary fact type or predicate
 - property type
 - attribute type
 - value type
@@ -47,6 +60,8 @@ The General Ontology Specification Language (GOSL) is a general language, expres
 ## Concrete syntax/visualization
 
 ## Optional: tool support
+
+## OLD
 
 The graphical formalism of GOSL is based on the Venn diagram, as illustrated by Fig. 1.
 There are two sets: RENTAL (with example elements r<sub>1</sub>, r<sub>2</sub> and r<sub>3</sub>) and PERSON (with example elements p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub> and p<sub>4</sub>).
