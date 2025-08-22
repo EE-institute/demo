@@ -39,6 +39,24 @@ Unary facts are predications of single objects; binary facts are predications of
 - A general modeling language (not domain specific) (conceptual) modeling language is the combination of a meta schema and a corresponding symbolic formalism
 - A meta schema is an instantiation of itself
 
+### Mathematical function
+GOSL uses the notion of a mathematical function that basically defines a mapping from one set (input or domain) to another set (output or range).
+The set of all possible inputs is called the domain, while the set of all possible outputs is called the range.
+A mapping f from set A to set B can be written as f: A->B.
+
+Example: If A is the set of all numbers, and B is the set of all even numbers, we can create a mapping f(x)=2x, but also a mapping where f(x)=2.
+
+If every element in the domain is mapped uniquely to one element in the range, the mapping is called injective, and an inverse can be defined.
+
+A binary fact kind or predicate can be defined as a mathematical function.
+Suppose there are two sets: RENTAL (with example elements r<sub>1</sub>, r<sub>2</sub> and r<sub>3</sub>) and PERSON (with example elements p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub> and p<sub>4</sub>).
+The function renter can be defined (and visualized, see Fig. 1) as a mapping from RENTAL to PERSON, which are respectively the domain and the range of renter.
+The expression renter(r<sub>i</sub>) = p<sub>j</sub> means that person p<sub>j</sub> is the renter of rental r<sub>i</sub>.
+
+<a name="mathfuncmapping"><img src="images/mathfuncmapping.jpg" alt="mathfuncmapping" width="600"/>
+
+![Fig. 1 Mathematical functions as mappings between sets]()
+
 ## Core concepts
 - entity type: unary fact type or predicate
 - property type
@@ -64,13 +82,7 @@ Unary facts are predications of single objects; binary facts are predications of
 ## OLD
 
 The graphical formalism of GOSL is based on the Venn diagram, as illustrated by Fig. 1.
-There are two sets: RENTAL (with example elements r<sub>1</sub>, r<sub>2</sub> and r<sub>3</sub>) and PERSON (with example elements p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub> and p<sub>4</sub>).
-The function renter is shown as a mapping from RENTAL to PERSON, which are respectively the domain and the range of renter.
-The expression renter(r<sub>i</sub>) = p<sub>j</sub> means that person p<sub>j</sub> is the renter of rental r<sub>i</sub>.
 
-<a name="mathfuncmapping"><img src="images/mathfuncmapping.jpg" alt="mathfuncmapping" width="600"/>
-
-![Fig. 1 Mathematical functions as mappings between sets]()
 
 <a name="propmapping"><img src="images/propmapping.jpg" alt="propmapping" width="500"/>
 
