@@ -2,7 +2,7 @@
 The General Ontology Specification Language (GOSL) is a general language, expressed in first-order logic, to define domain specific modeling languages.
 
 ## TODO
-- [ ] decide on structure and form
+- [ ] decide on structure and form: EBNF vs PRN - Jan claimt dat te hanteren maar ik vind de gebruikte constructen niet als zodanig terug in die specificatie - vs Antlr
 - [ ] "Entity A typed concrete thing. Examples of tangible entities are roses and cars;
 examples of intangible entities are purchases and rentals" -> NO; rose and car are entity types, some specific rose or the car with license plate A-111-AA is an entity (or object)
 - [ ] "Value: A typed abstract thing. Values are commonly ordered in value scales. Examples of values are days, meters and Boolean values" NO again, examples are 1/1/2020, true, etc. These are examples of Value Types
@@ -17,6 +17,11 @@ examples of intangible entities are purchases and rentals" -> NO; rose and car a
 - [ ] moet event type wel onderdeel zijn van GOSL? Wel relevant voor metamodel van FM, niet voor zichzelf of andere talen
 
 ## Purpose and scope
+
+## Dependencies
+- Antlr
+- book?
+- EBNF/PRN/...?
 
 ## Summary of relevant theories
 
@@ -77,7 +82,35 @@ The expression renter(r<sub>i</sub>) = p<sub>j</sub> means that person p<sub>j</
 
 ## Optional: rules
 
-## Concrete syntax/visualization
+## Concrete syntax
+
+### Textual formalism
+type name = {lower case letter}-, {“ “, {lower case letter}}
+
+class name = {upper case letter}-, {“ “, {upper case letter}}
+
+entity type name = noun or nominal phrase (in lower case);
+% Examples: rental, deposit paid rental %
+
+entity class name = noun or nominal phrase (in upper case);
+% Examples: RENTAL, DEPOSIT PAID RENTAL %
+
+value type name = noun or nominal phrase (in lower case);
+% Examples: pizza kind, car group %
+
+value class name = noun or nominal phrase (in upper case) between "{" and "}";
+% Examples: {PIZZA KIND}, {CAR GROUP} %
+
+property type name = noun or nominal phrase (in lower case);
+% Examples: renter, pick-up branch %
+
+attribute type name = noun or nominal phrase (in lower case);
+% Examples: age, daily rental rate %
+
+event type name = perfect tense of a verb (in lower case);
+% Examples: completed, paid %
+
+### Graphical formalism (visualization)
 
 ## Optional: tool support
 
