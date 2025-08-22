@@ -26,13 +26,14 @@ The General Ontology Specification Language (GOSL) is a general language, expres
 - A general modeling language (not domain specific) (conceptual) modeling language is the combination of a meta schema and a corresponding symbolic formalism
 - A meta schema is an instantiation of itself
 
-## Core concepts/abstract syntax
+## Core concepts
 - entity type
 - property type
 - attribute type
 - value type
-- event type?
+- event type
 
+## Abstract syntax
 <a name="goslschema"><img src="images/gosl-schema.jpg" alt="goslschema" width="800"/>
 
 ![Fig. 0 GOSL (meta) schema]()
