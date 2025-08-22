@@ -26,14 +26,13 @@ The General Ontology Specification Language (GOSL) is a general language, expres
 - A meta schema is an instantiation of itself
 
 ## Core concepts/abstract syntax
-- [ ] include meta meta model/meta schema
 - entity type
 - property type
 - attribute type
 - value type
 - event type?
 
-<a name="goslschema"><img src="images/gosl-schema.jpg" alt="goslschema" width="600"/>
+<a name="goslschema"><img src="images/gosl-schema.jpg" alt="goslschema" width="800"/>
 
 ![Fig. 0 GOSL (meta) schema]()
 
