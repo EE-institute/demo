@@ -33,7 +33,7 @@ The General Ontology Specification Language (GOSL) is a general language, expres
 - value type
 - event type?
 
-<a name="goslschema"><img src="images/goslschema.png" alt="goslschema" width="600"/>
+<a name="goslschema"><img src="images/gosl-schema.png" alt="goslschema" width="600"/>
 
 ![Fig. 0 GOSL (meta) schema]()
 
