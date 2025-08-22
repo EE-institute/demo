@@ -7,6 +7,7 @@ The General Ontology Specification Language (GOSL) is a general language, expres
 - [ ] textual formalism = abstract or concrete syntax?
 - [ ] should we discern abstract from concrete syntax?
 - [ ] schemas are called ontological as names and other lexical attributes are left out. GOSL meta schema does not contains names, but textual formalism of GOSL does (...)
+- [ ] "Attributes are a special kind of properties. " en vervolgens, het verschil is. Dus: attribute is niet een special kind (specialization), maar iets anders (hoewel er overlap is) -> juiste terminologie bepalen!
 
 ## Purpose of this document/language
 
