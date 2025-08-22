@@ -42,11 +42,13 @@ Unary facts are predications of single objects; binary facts are predications of
 ### Mathematical function
 GOSL uses the notion of a mathematical function that basically defines a mapping from one set (input or domain) to another set (output or range).
 The set of all possible inputs is called the domain, while the set of all possible outputs is called the range.
-A mapping f from set A to set B can be written as f: A->B.
+A mapping f from set A to set B can be written as f: A->B, but multiple mappings from A to B may exist.
 
 Example: If A is the set of all numbers, and B is the set of all even numbers, we can create a mapping f(x)=2x, but also a mapping where f(x)=2.
 
 If every element in the domain is mapped uniquely to one element in the range, the mapping is called injective, and an inverse can be defined.
+
+Related to the example: the first mapping is injective and inversible, the second one is not.
 
 A binary fact kind or predicate can be defined as a mathematical function.
 Suppose there are two sets: RENTAL (with example elements r<sub>1</sub>, r<sub>2</sub> and r<sub>3</sub>) and PERSON (with example elements p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub> and p<sub>4</sub>).
