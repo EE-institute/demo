@@ -1,8 +1,51 @@
 # The graphical formalism of GOSL
+The General Ontology Specification Language (GOSL) is a general language, expressed in first-order logic, to define domain specific modeling languages.
+
+## TODO
+- [ ] decide on structure and form
+- [ ] is GOSL for specifying state and transition space, or to specify languages to specify ...
+- [ ] textual formalism = abstract or concrete syntax?
+- [ ] should we discern abstract from concrete syntax?
+- [ ] schemas are called ontological as names and other lexical attributes are left out. GOSL meta schema does not contains names, but textual formalism of GOSL does (...)
+
+## Purpose of this document/language
+
+## Summary of relevant theories
+
+### FI
+- Fact, information, thing, object, type, class
+- Creation of types: declaration and derivation
+
+### MU (needed?)
+- Model is a role notion: any subject using a complex A that is neither directly nor indirectly interacting with complex B, to obtain information about complex B, is using A as a model of B. After Apostel, where complex refers to either a system or an aggregate (of systems (?))
+- A (conceptual) complex (model) is an instantiation of a conceptual schema (meta model)
+- A conceptual schema of a world is a specification of its state space and its transition space.
+- A domain specific (conceptual) modeling language is the combination of a conceptual schema (semantics) and a corresponding symbolic formalism (syntax)
+- A conceptual schema is an instantiation (expression) of a meta schema (meta meta model)
+- A general modeling language (not domain specific) (conceptual) modeling language is the combination of a meta schema and a corresponding symbolic formalism
+- A meta schema is an instantiation of itself
+
+## Core concepts/abstract syntax
+- [ ] include meta meta model/meta schema
+- entity type
+- property type
+- attribute type
+- value type
+- event type?
+
+<a name="goslschema"><img src="images/goslschema.png" alt="goslschema" width="600"/>
+
+![Fig. 0 GOSL (meta) schema]()
 
 [//]: <> (Appendix A assumes that the reader knows the graphical formalism of GOSL. This need not be)
 [//]: <> (the case for everyone. Therefore, we copy the relevant part of [1] Chap. 6 below. The textual)
 [//]: <> (formalism of GOSL is included already in Chap. 2, The basics of DEMO-SL)
+
+## Optional: rules
+
+## Concrete syntax/visualization
+
+## Optional: tool support
 
 The graphical formalism of GOSL is based on the Venn diagram, as illustrated by Fig. 1.
 There are two sets: RENTAL (with example elements r<sub>1</sub>, r<sub>2</sub> and r<sub>3</sub>) and PERSON (with example elements p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub> and p<sub>4</sub>).
@@ -152,7 +195,6 @@ Likewise, boat is a subtype of vehicle and thus vehicle is a supertype of boat, 
 On the right side of Fig. 8, the notion of aggregation is explained. 
 The derived concept offer could be useful for comparing the prices of a product (on a day) in different shops.
 The price would then be an attribute type of the entity type offer.
-The definition of the specialisation completed_rental in Fig. 9 (right side) is comprehensive.
 
 
 **GRAPHICAL SPECIFICATION of GENERALISATION and AGGREGATION**
@@ -166,6 +208,7 @@ The definition of the specialisation completed_rental in Fig. 9 (right side) is 
 
 ![Fig.9 The specification of derived types (2)]()
 
+The definition of the specialisation completed_rental in Fig. 9 (right side) is comprehensive.
 The definition of the specialisation student (left side), however, needs to be complemented by a precise rule, e.g. that a student is a person for whom there is an admission in which this person is the applicant.
 
 **GRAPHICAL SPECIFICATION of SPECIALISATION**
