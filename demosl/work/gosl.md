@@ -26,13 +26,20 @@ examples of intangible entities are purchases and rentals" -> NO; rose and car a
 ## Summary of relevant theories
 
 ### FI
-- Things, objects, entities
+- A **thing** is anything that can be pointed to or thought about. A thing has features through which it can be perceived. Examples include a rock or an idea. We can discern *thought*s and *concrete thing*s.
+- A **thought** is a *thing* in the mind.
+- A **concrete thing** is a *thing* outside the mind, in the real world. Examples include a car, a human, a purchase, a rental. We can discern *conceptual thing*s and *abstract thing*s.
+- A **conceptual thing** is a *thought* (in the mind) that represents or refers to a *concrete thing*.
+- An **abstract thing** is a *thought* that only exists in the mind. Examples include a number, a boolean value.
+- An **object** is the core, identity, or bare individual of a *thing*. The object itself is not a thing.
+- A **fact** is a predication (statement) about one or more *thing*s, and the result of an act. We can discern *unary fact*s and *binary fact*s, and ignore higher-order predication as they can be broken up into multiple binary facts.
+- A **unary fact** is a predication about one *thing*.
+- A **binary fact** is a predication about two *thing*s.
+- 
 - A fact becomes existent in the mind when a perceived thing conforms to some type. A fact is an instantiation of a type. In logical terms, a fact is a predication of an object, with the type as predicate.
 - Type: prescription of form to be applied to things or pairs of things. If a (pair of) thing(s) conforms to a type, the fact starts to exist that represents this conformity, e.g., 'the thing called 'Jan' is a human'. We say the fact is an instance of the type, in this case the type 'human'
 - Type and class are dyadic notions: a class is the extension of a type, and a type is the intension of a class.
 When one exists, the other exists as well.
-- We distinguish between unary facts and binary facts.
-Unary facts are predications of single objects; binary facts are predications of pairs of single objects
 - Creation of types: declaration and derivation
 
 ### MU (needed?)
